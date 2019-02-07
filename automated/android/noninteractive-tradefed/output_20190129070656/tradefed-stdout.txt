@@ -1,0 +1,40 @@
+Picked up _JAVA_OPTIONS: -Xmx350M
+Android Compatibility Test Suite 7.1_r1 (3571453)
+Non-interactive mode: Running initial command then exiting.
+Using commandline arguments as starting command: [run, commandAndExit, cts, -m, CtsBionicTestCases, --abi, armeabi, --disable-reboot, --skip-preconditions, --skip-device-info]
+01-29 07:02:32 D/CommandScheduler: No available device matching the config's requirements for cmd id 1.
+The command [cts, -m, CtsBionicTestCases, --abi, armeabi, --disable-reboot, --skip-preconditions, --skip-device-info] will be rescheduled.
+01-29 07:02:32 I/DeviceManager: Detected new device 0123456789ABCDEF
+01-29 07:02:32 I/TestInvocation: Starting invocation for 'cts' on build '3571453' cts -m CtsBionicTestCases --abi armeabi --disable-reboot --skip-preconditions --skip-device-info Compatibility Test Suite 3571453 CTS 1548745352567 /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/tools/../.. 7.1_r1 cts https://androidpartner.googleapis.com/v1/dynamicconfig/suites/CTS/modules/{module}/version/{version}?key=AIzaSyAbwX5JRlmsLeygY2WWihpIJPXFLueOQ3U 2019.01.29_07.02.32 on device 0123456789ABCDEF
+01-29 07:02:32 I/ResultReporter: Initializing result directory
+01-29 07:02:32 I/ResultReporter: Results Directory: /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/tools/../../android-cts/results/2019.01.29_07.02.32
+01-29 07:02:32 I/ResultReporter: Created log dir /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/tools/../../android-cts/logs/2019.01.29_07.02.32
+01-29 07:02:34 E/TestInvocation: Unexpected exception when running invocation: java.lang.IllegalArgumentException: Device 0123456789ABCDEF doesn't support armeabi
+01-29 07:02:34 E/TestInvocation: Device 0123456789ABCDEF doesn't support armeabi
+java.lang.IllegalArgumentException: Device 0123456789ABCDEF doesn't support armeabi
+    at com.android.compatibility.common.tradefed.testtype.CompatibilityTest.getAbis(CompatibilityTest.java:493)
+    at com.android.compatibility.common.tradefed.testtype.CompatibilityTest.run(CompatibilityTest.java:339)
+    at com.android.tradefed.invoker.TestInvocation.runTests(TestInvocation.java:716)
+    at com.android.tradefed.invoker.TestInvocation.prepareAndRun(TestInvocation.java:491)
+    at com.android.tradefed.invoker.TestInvocation.performInvocation(TestInvocation.java:386)
+    at com.android.tradefed.invoker.TestInvocation.invoke(TestInvocation.java:166)
+    at com.android.tradefed.command.CommandScheduler$InvocationThread.run(CommandScheduler.java:471)
+
+01-29 07:02:34 W/ResultReporter: Invocation failed: java.lang.IllegalArgumentException: Device 0123456789ABCDEF doesn't support armeabi
+01-29 07:02:34 I/ResultReporter: Saved logs for device_logcat in /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/tools/../../android-cts/logs/2019.01.29_07.02.32/device_logcat_2022862263101898653.zip
+01-29 07:02:34 I/ResultReporter: Saved logs for host_log in /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/tools/../../android-cts/logs/2019.01.29_07.02.32/host_log_3764778993760255734.zip
+01-29 07:02:34 I/ResultReporter: Invocation finished in 2s. PASSED: 0, FAILED: 0, NOT EXECUTED: 0, MODULES: 0 of 0
+01-29 07:02:34 I/ResultReporter: Test Result: /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/results/2019.01.29_07.02.32/test_result.xml
+01-29 07:02:34 I/ResultReporter: Full Result: /opt/share/test-definitions/automated/android/noninteractive-tradefed/android-cts/results/2019.01.29_07.02.32.zip
+01-29 07:02:34 E/CommandScheduler: Device 0123456789ABCDEF doesn't support armeabi
+java.lang.IllegalArgumentException: Device 0123456789ABCDEF doesn't support armeabi
+    at com.android.compatibility.common.tradefed.testtype.CompatibilityTest.getAbis(CompatibilityTest.java:493)
+    at com.android.compatibility.common.tradefed.testtype.CompatibilityTest.run(CompatibilityTest.java:339)
+    at com.android.tradefed.invoker.TestInvocation.runTests(TestInvocation.java:716)
+    at com.android.tradefed.invoker.TestInvocation.prepareAndRun(TestInvocation.java:491)
+    at com.android.tradefed.invoker.TestInvocation.performInvocation(TestInvocation.java:386)
+    at com.android.tradefed.invoker.TestInvocation.invoke(TestInvocation.java:166)
+    at com.android.tradefed.command.CommandScheduler$InvocationThread.run(CommandScheduler.java:471)
+
+Saved log to /tmp/tradefed_global_log_3468863830870438546.txt
+01-29 07:02:34 I/CommandScheduler: All done

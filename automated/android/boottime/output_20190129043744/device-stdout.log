@@ -1,0 +1,13 @@
+SURFACEFLINGER_BOOT_TIME pass
+ANDROID_SERVICE_START_TIME pass
+SERVICE_STARTED_ONCE pass
+boottime/
+boottime/logcat_all_1.log
+boottime/result.txt
+boottime/logcat_events_1.log
+boottime/dmesg_1.log
+boottime/logcat_all_10.log
+boottime/logcat_events_10.log
+boottime/dmesg_10.log
+boottime/boot_time_statistic_data.csv
+BOOTTIME_ANALYZE pass

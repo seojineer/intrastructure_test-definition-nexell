@@ -1,0 +1,3 @@
+glsl-fs-pointcoord_gles2: fail
+minmax_gles2: fail
+multiple-shader-objects_gles2: fail

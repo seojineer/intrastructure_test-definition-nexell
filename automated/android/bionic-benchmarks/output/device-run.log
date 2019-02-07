@@ -1,0 +1,5 @@
+Run 1...
+chmod: /data/benchmarktest64/bionic-benchmarks/bionic-benchmarks64: No such file or directory
+Can't execute /data/benchmarktest64/bionic-benchmarks/bionic-benchmarks64!
+chmod: /data/benchmarktest/bionic-benchmarks/bionic-benchmarks32: No such file or directory
+Can't execute /data/benchmarktest/bionic-benchmarks/bionic-benchmarks32!

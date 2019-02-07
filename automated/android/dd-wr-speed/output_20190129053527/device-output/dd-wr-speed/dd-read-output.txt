@@ -1,0 +1,15 @@
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.030793 seconds, 22.2MB/s
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 45.948243 seconds, 22.3MB/s
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.070189 seconds, 22.2MB/s
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.001600 seconds, 22.3MB/s
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 45.922487 seconds, 22.3MB/s

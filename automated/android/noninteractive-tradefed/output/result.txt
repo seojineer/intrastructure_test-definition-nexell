@@ -1,0 +1,5 @@
+tradefed-test-run pass
+armeabi-v7a.CtsBionicTestCases_executed pass 1612
+armeabi-v7a.CtsBionicTestCases_passed pass 1612
+armeabi-v7a.CtsBionicTestCases_failed pass 0
+armeabi-v7a.CtsBionicTestCases_done pass

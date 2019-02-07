@@ -1,0 +1,19 @@
++ ITERATION=5 
++ OUTPUT=/data/local/tmp/dd-wr-speed 
++ PARTITION= 
++ export 'PATH=/data/local/tmp/bin:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin'
++ '[' 2 -lt 2 ']'
++ '[' -d /data/local/tmp/dd-wr-speed ']'
++ mkdir -p /data/local/tmp/dd-wr-speed
++ cd /data/local/tmp/dd-wr-speed
++ '[' -n  ']'
++ seq 5
++ echo
+
++ echo 'INFO: Running dd write test [1/5]'
+INFO: Running dd write test [1/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt

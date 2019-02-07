@@ -1,0 +1,265 @@
+08-31 23:59:59.643 I/auditd  (  125): type=2000 audit(0.0:1): initialized
+09-01 00:00:01.591 I/auditd  (  125): type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+09-01 00:00:01.592 I/auditd  (  125): type=1404 audit(0.0:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+09-01 00:00:02.042 I/auditd  (  117): type=1400 audit(0.0:4): avc: denied { getattr } for comm="e2fsck" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:02.043 I/auditd  (  117): type=1400 audit(0.0:5): avc: denied { getattr } for comm="e2fsck" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:02.043 I/auditd  (  117): type=1400 audit(0.0:6): avc: denied { read write } for comm="e2fsck" name="mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:02.104 I/auditd  (  122): type=1400 audit(0.0:7): avc: denied { getattr } for comm="e2fsck" path="/dev/block/mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:02.105 I/auditd  (  122): type=1400 audit(0.0:8): avc: denied { getattr } for comm="e2fsck" path="/dev/block/mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:02.105 I/auditd  (  122): type=1400 audit(0.0:9): avc: denied { read write } for comm="e2fsck" name="mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+09-01 00:00:04.370 I/boot_progress_start(  171): 5305
+09-01 00:00:06.332 I/boot_progress_preload_start(  171): 7264
+09-01 00:00:10.197 I/boot_progress_preload_end(  171): 11132
+09-01 00:00:10.515 I/boot_progress_system_run(  442): 11449
+09-01 00:00:11.574 I/boot_progress_pms_start(  442): 12509
+09-01 00:00:11.914 I/boot_progress_pms_system_scan_start(  442): 12849
+09-01 00:00:14.766 I/boot_progress_pms_data_scan_start(  442): 15701
+09-01 00:00:14.786 I/boot_progress_pms_scan_end(  442): 15721
+09-01 00:00:15.292 I/boot_progress_pms_ready(  442): 16227
+09-01 00:00:15.415 I/battery_status(  442): [2,2,1,1,]
+09-01 00:00:15.415 I/battery_level(  442): [100,0,424]
+09-01 00:00:15.934 I/wm_stack_created(  442): 0
+09-01 00:00:16.137 I/configuration_changed(  442): 7672
+09-01 00:00:16.145 I/configuration_changed(  442): 1032
+09-01 00:00:16.153 I/configuration_changed(  442): 256
+09-01 00:00:16.214 I/configuration_changed(  442): 512
+09-01 00:00:17.262 I/free_storage_left(  442): [4711534592,1492729856,4711534592]
+09-01 00:00:17.262 I/free_storage_changed(  442): 4711534592
+09-01 00:00:17.384 I/stream_devices_changed(  442): [0,0,2]
+09-01 00:00:17.385 I/stream_devices_changed(  442): [2,0,2]
+09-01 00:00:17.385 I/stream_devices_changed(  442): [3,0,2]
+09-01 00:00:17.386 I/stream_devices_changed(  442): [4,0,2]
+09-01 00:00:17.386 I/stream_devices_changed(  442): [6,0,2]
+09-01 00:00:17.879 I/boot_progress_ams_ready(  442): 18814
+09-01 00:00:17.985 I/am_proc_start(  442): [0,522,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:00:18.025 I/am_proc_bound(  442): [0,522,com.android.bluetooth]
+09-01 00:00:18.052 I/am_proc_start(  442): [0,538,10038,com.android.inputmethod.latin,service,com.android.inputmethod.latin/.LatinIME]
+09-01 00:00:18.133 I/am_proc_start(  442): [0,555,1037,WebViewLoader-armeabi-v7a,,]
+09-01 00:00:18.159 I/am_proc_start(  442): [0,567,10019,com.android.systemui,service,com.android.systemui/.SystemUIService]
+09-01 00:00:18.161 I/am_proc_bound(  442): [0,538,com.android.inputmethod.latin]
+09-01 00:00:18.242 I/am_proc_bound(  442): [0,567,com.android.systemui]
+09-01 00:00:18.981 I/netstats_mobile_sample(  442): [0,0,0,0,0,0,0,0,0,0,0,0,-1]
+09-01 00:00:18.981 I/netstats_wifi_sample(  442): [0,0,0,0,0,0,0,0,0,0,0,0,-1]
+09-01 00:00:19.099 I/am_proc_start(  442): [0,653,1001,com.android.phone,added application,com.android.phone]
+09-01 00:00:19.157 I/am_create_task(  442): [0,1]
+09-01 00:00:19.157 I/am_create_activity(  442): [0,102347033,1,com.android.settings/.FallbackHome,android.intent.action.MAIN,NULL,NULL,276824320]
+09-01 00:00:19.164 I/wm_task_created(  442): [1,0]
+09-01 00:00:19.165 I/wm_task_moved(  442): [1,1,0]
+09-01 00:00:19.165 I/wm_task_moved(  442): [1,1,0]
+09-01 00:00:19.166 I/am_focused_activity(  442): [0,com.android.settings/.FallbackHome,startedActivity]
+09-01 00:00:19.190 I/am_proc_start(  442): [0,670,1000,com.android.settings,activity,com.android.settings/.FallbackHome]
+09-01 00:00:19.200 I/am_proc_bound(  442): [0,653,com.android.phone]
+09-01 00:00:19.205 I/dvm_lock_sample(  442): [system_server,1,android.ui,116,ActivityManagerService.java,4229,-,13405,23]
+09-01 00:00:19.283 I/bt_config_source(  522): 4
+09-01 00:00:19.312 I/am_proc_bound(  442): [0,670,com.android.settings]
+09-01 00:00:19.382 I/am_restart_activity(  442): [0,102347033,1,com.android.settings/.FallbackHome]
+09-01 00:00:19.406 I/dvm_lock_sample(  442): [system_server,1,android.display,77,ActivityManagerService.java,22026,-,6699,15]
+09-01 00:00:19.786 I/am_on_resume_called(  670): [0,com.android.settings.FallbackHome,LAUNCH_ACTIVITY]
+09-01 00:00:19.918 I/notification_enqueue(  442): [1000,442,android,17040422,NULL,-1,Notification(pri=-2 contentView=null vibrate=null sound=null tick defaults=0x0 flags=0x2 color=0xff607d8b vis=PUBLIC),0]
+09-01 00:00:19.920 I/notification_enqueue(  442): [1000,442,android,17040429,NULL,-1,Notification(pri=0 contentView=null vibrate=null sound=null tick defaults=0x0 flags=0x2 color=0xff607d8b vis=PUBLIC),0]
+09-01 00:00:19.954 I/sysui_action(  567): [213,2]
+09-01 00:00:20.039 I/boot_progress_enable_screen(  442): 20974
+09-01 00:00:20.045 I/am_activity_launch_time(  442): [0,102347033,com.android.settings/.FallbackHome,874,874]
+09-01 00:00:20.051 I/screen_toggled(  442): 1
+09-01 00:00:22.031 I/force_gc(  442): Binder
+09-01 00:00:22.171 I/sf_stop_bootanim(  127): 23105
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [111,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [126,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [261,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [118,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [123,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [113,100]
+09-01 00:00:22.198 I/sysui_view_visibility(  567): [112,100]
+09-01 00:00:22.219 I/sf_frame_dur(  127): [BootAnimation,1,0,207,3,0,0,0]
+09-01 00:00:22.230 I/sysui_status_bar_state(  567): [1,1,0,0,0,1]
+09-01 00:00:22.231 I/am_pause_activity(  442): [0,102347033,com.android.settings/.FallbackHome]
+09-01 00:00:22.240 I/am_on_paused_called(  670): [0,com.android.settings.FallbackHome,handlePauseActivity]
+09-01 00:00:22.242 I/am_stop_activity(  442): [0,102347033,com.android.settings/.FallbackHome]
+09-01 00:00:22.243 I/sysui_count(  442): [window_time_0,11]
+09-01 00:00:22.245 I/sysui_histogram(  567): [note_load,0]
+09-01 00:00:22.247 I/notification_panel_revealed(  442): 0
+09-01 00:00:22.248 I/am_on_stop_called(  670): [0,com.android.settings.FallbackHome,sleeping]
+09-01 00:00:22.275 I/wm_boot_animation_done(  442): 23210
+09-01 00:00:22.305 I/am_proc_start(  442): [0,864,10008,android.ext.services,on-hold,]
+09-01 00:00:22.308 I/sysui_histogram(  442): [framework_locked_boot_completed,23]
+09-01 00:00:22.432 I/sysui_histogram(  889): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.445 I/sysui_histogram(  889): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.445 I/sysui_histogram(  889): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.499 I/sysui_histogram(  891): [factory_reset_current_time,1251763222]
+09-01 00:00:22.501 I/sysui_histogram(  891): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.501 I/sysui_histogram(  891): [factory_reset_record_value,1251763240]
+09-01 00:00:22.529 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.529 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.529 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.529 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.530 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.531 I/sysui_histogram(  892): [bootstat_mtime_matches_content,1]
+09-01 00:00:22.532 I/sysui_histogram(  892): [post_decrypt_time_elapsed,3]
+09-01 00:00:22.532 I/sysui_histogram(  892): [last_boot_time_utc,1251763222]
+09-01 00:00:22.532 I/sysui_histogram(  892): [build_date,1548182105]
+09-01 00:00:22.532 I/sysui_histogram(  892): [boot_decryption_complete,23]
+09-01 00:00:22.532 I/sysui_histogram(  892): [ota_boot_complete_post_decrypt,37]
+09-01 00:00:22.532 I/sysui_histogram(  892): [ota_boot_complete,40]
+09-01 00:00:22.532 I/sysui_histogram(  892): [boot_reason,1]
+09-01 00:00:22.532 I/sysui_histogram(  892): [factory_reset_current_time,1251763222]
+09-01 00:00:22.532 I/sysui_histogram(  892): [factory_reset,1251763240]
+09-01 00:00:22.532 I/sysui_histogram(  892): [time_since_last_boot,0]
+09-01 00:00:22.532 I/sysui_histogram(  892): [boot_complete_post_decrypt,20]
+09-01 00:00:22.532 I/sysui_histogram(  892): [boot_complete,23]
+09-01 00:00:22.532 I/sysui_histogram(  892): [factory_reset_record_value,1251763240]
+09-01 00:00:22.532 I/sysui_histogram(  892): [time_since_factory_reset,-18]
+09-01 00:00:22.716 I/dvm_lock_sample(  442): [system_server,1,Binder:442_1,419,UserController.java,1464,ActivityManagerService.java,6852,83]
+09-01 00:00:22.717 I/dvm_lock_sample(  442): [system_server,1,ActivityManager,408,BroadcastQueue.java,762,ActivityManagerService.java,6852,81]
+09-01 00:00:22.720 I/am_proc_bound(  442): [0,864,android.ext.services]
+09-01 00:00:22.752 I/sf_frame_dur(  127): [KeyguardScrim,0,0,0,0,0,0,1]
+09-01 00:00:22.753 I/am_proc_start(  442): [0,895,10031,com.android.deskclock,broadcast,com.android.deskclock/.AlarmInitReceiver]
+09-01 00:00:22.916 I/am_proc_bound(  442): [0,895,com.android.deskclock]
+09-01 00:00:23.000 I/sysui_histogram(  442): [framework_boot_completed,23]
+09-01 00:00:23.112 I/am_proc_start(  442): [0,927,10049,com.android.smspush,service,com.android.smspush/.WapPushManager]
+09-01 00:00:23.117 I/am_finish_activity(  442): [0,102347033,1,com.android.settings/.FallbackHome,app-request]
+09-01 00:00:23.151 I/am_destroy_activity(  442): [0,102347033,1,com.android.settings/.FallbackHome,finish-imm]
+09-01 00:00:23.152 I/am_focused_activity(  442): [-1,NULL,resetFocusedActivityIfNeeded]
+09-01 00:00:23.159 I/dvm_lock_sample(  442): [system_server,1,android.ui,87,ActivityManagerService.java,4229,-,17341,17]
+09-01 00:00:23.218 I/am_proc_start(  442): [0,943,1000,com.android.keychain,service,com.android.keychain/.KeyChainService]
+09-01 00:00:23.262 I/am_proc_bound(  442): [0,927,com.android.smspush]
+09-01 00:00:23.272 I/dvm_lock_sample(  442): [system_server,1,android.ui,103,ShortcutService.java,486,ArrayList.java,-1,20]
+09-01 00:00:23.295 I/wm_task_removed(  442): [1,removeAppToken: last token]
+09-01 00:00:23.296 I/wm_task_removed(  442): [1,removeTask]
+09-01 00:00:23.303 I/sf_frame_dur(  127): [com.android.settings/com.android.settings.FallbackHome,66,4,1,1,0,0,1]
+09-01 00:00:23.319 I/am_create_task(  442): [0,2]
+09-01 00:00:23.319 I/am_create_activity(  442): [0,179012195,2,com.android.launcher3/.Launcher,android.intent.action.MAIN,NULL,NULL,268435712]
+09-01 00:00:23.320 I/wm_task_created(  442): [2,0]
+09-01 00:00:23.332 I/wm_task_moved(  442): [2,1,0]
+09-01 00:00:23.334 I/wm_task_moved(  442): [2,1,0]
+09-01 00:00:23.335 I/am_focused_activity(  442): [0,com.android.launcher3/.Launcher,startedActivity]
+09-01 00:00:23.356 I/am_proc_start(  442): [0,969,10039,com.android.launcher3,activity,com.android.launcher3/.Launcher]
+09-01 00:00:23.359 I/dvm_lock_sample(  442): [system_server,1,Binder:442_5,21,UserController.java,1464,ActivityStackSupervisor.java,3884,4]
+09-01 00:00:23.362 I/am_proc_bound(  442): [0,943,com.android.keychain]
+09-01 00:00:23.435 I/am_proc_bound(  442): [0,969,com.android.launcher3]
+09-01 00:00:23.451 I/am_restart_activity(  442): [0,179012195,2,com.android.launcher3/.Launcher]
+09-01 00:00:23.459 I/am_pause_activity(  442): [0,179012195,com.android.launcher3/.Launcher]
+09-01 00:00:23.872 I/am_proc_start(  442): [0,998,10007,android.process.media,broadcast,com.android.providers.downloads/.DownloadReceiver]
+09-01 00:00:23.944 I/am_proc_bound(  442): [0,998,android.process.media]
+09-01 00:00:23.962 I/am_stop_activity(  442): [0,179012195,com.android.launcher3/.Launcher]
+09-01 00:00:23.965 I/sysui_count(  442): [window_time_0,1]
+09-01 00:00:24.050 I/notification_visibility(  442): [-1|android|17040429|null|1000,1,5965,5965,0,0]
+09-01 00:00:24.328 I/am_meminfo(  442): [53161984,1408483328,0,65720320,65973248]
+09-01 00:00:24.377 I/am_on_resume_called(  969): [0,com.android.launcher3.Launcher,LAUNCH_ACTIVITY]
+09-01 00:00:24.431 I/am_on_paused_called(  969): [0,com.android.launcher3.Launcher,handlePauseActivity]
+09-01 00:00:24.432 I/am_failed_to_pause(  442): [0,179012195,com.android.launcher3/.Launcher,(none)]
+09-01 00:00:24.448 I/am_on_stop_called(  969): [0,com.android.launcher3.Launcher,sleeping]
+09-01 00:00:24.598 I/am_activity_launch_time(  442): [0,179012195,com.android.launcher3/.Launcher,1138,1260]
+09-01 00:00:24.777 I/am_proc_start(  442): [0,1049,10026,com.android.calendar,broadcast,com.android.calendar/.alerts.AlertReceiver]
+09-01 00:00:24.822 I/am_proc_bound(  442): [0,1049,com.android.calendar]
+09-01 00:00:25.051 I/am_proc_start(  442): [0,1074,10033,com.android.email,broadcast,com.android.email/.service.EmailBroadcastReceiver]
+09-01 00:00:25.052 I/dvm_lock_sample(  442): [system_server,1,android.ui,16,ActivityManagerService.java,4229,BroadcastQueue.java,762,3]
+09-01 00:00:25.090 I/am_proc_start(  442): [0,1089,10002,com.android.providers.calendar,content provider,com.android.providers.calendar/.CalendarProvider2]
+09-01 00:00:25.091 I/am_proc_bound(  442): [0,1074,com.android.email]
+09-01 00:00:25.116 I/am_proc_bound(  442): [0,1089,com.android.providers.calendar]
+09-01 00:00:25.726 I/am_proc_start(  442): [0,1117,10010,com.android.managedprovisioning,broadcast,com.android.managedprovisioning/.BootReminder]
+09-01 00:00:25.726 I/dvm_lock_sample(  442): [system_server,1,android.ui,16,ActivityManagerService.java,4229,BroadcastQueue.java,762,3]
+09-01 00:00:25.753 I/am_proc_bound(  442): [0,1117,com.android.managedprovisioning]
+09-01 00:00:25.853 I/am_proc_start(  442): [0,1134,10012,com.android.onetimeinitializer,broadcast,com.android.onetimeinitializer/.OneTimeInitializerReceiver]
+09-01 00:00:25.883 I/am_proc_bound(  442): [0,1134,com.android.onetimeinitializer]
+09-01 00:00:28.968 I/bt_hci_timeout(  522): 3075
+09-01 00:00:29.023 I/am_proc_died(  442): [0,522,com.android.bluetooth]
+09-01 00:00:29.024 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:00:29.025 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:00:29.028 I/am_mem_factor(  442): [1,0]
+09-01 00:00:29.260 I/am_proc_start(  442): [0,1164,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:00:29.278 I/am_proc_bound(  442): [0,1164,com.android.bluetooth]
+09-01 00:00:29.387 I/bt_config_source( 1164): 4
+09-01 00:00:38.080 I/bt_hci_timeout( 1164): 3075
+09-01 00:00:38.110 I/am_proc_died(  442): [0,1164,com.android.bluetooth]
+09-01 00:00:38.111 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:00:38.111 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:00:38.344 I/am_proc_start(  442): [0,1211,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:00:38.361 I/am_proc_bound(  442): [0,1211,com.android.bluetooth]
+09-01 00:00:38.407 I/am_pss  (  442): [538,10038,com.android.inputmethod.latin,14446592,9838592,0]
+09-01 00:00:38.472 I/bt_config_source( 1211): 4
+09-01 00:00:47.165 I/bt_hci_timeout( 1211): 3075
+09-01 00:00:47.192 I/am_proc_died(  442): [0,1211,com.android.bluetooth]
+09-01 00:00:47.193 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:00:47.193 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:00:47.240 I/am_pss  (  442): [1049,10026,com.android.calendar,9063424,5173248,0]
+09-01 00:00:47.280 I/am_pss  (  442): [969,10039,com.android.launcher3,18057216,11075584,0]
+09-01 00:00:47.310 I/am_pss  (  442): [927,10049,com.android.smspush,5245952,2056192,0]
+09-01 00:00:47.340 I/am_pss  (  442): [864,10008,android.ext.services,5467136,2072576,0]
+09-01 00:00:47.419 I/am_proc_start(  442): [0,1242,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:00:47.456 I/am_proc_bound(  442): [0,1242,com.android.bluetooth]
+09-01 00:00:47.565 I/bt_config_source( 1242): 4
+09-01 00:00:55.148 I/am_pss  (  442): [670,1000,com.android.settings,12174336,5169152,0]
+09-01 00:00:55.204 I/am_pss  (  442): [895,10031,com.android.deskclock,9821184,6168576,0]
+09-01 00:00:55.235 I/am_pss  (  442): [943,1000,com.android.keychain,5223424,2142208,0]
+09-01 00:00:56.260 I/bt_hci_timeout( 1242): 3075
+09-01 00:00:56.283 I/am_proc_died(  442): [0,1242,com.android.bluetooth]
+09-01 00:00:56.284 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:00:56.284 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:00:56.349 I/am_pss  (  442): [1074,10033,com.android.email,15180800,11329536,0]
+09-01 00:00:56.380 I/am_pss  (  442): [1134,10012,com.android.onetimeinitializer,5062656,1880064,0]
+09-01 00:00:56.411 I/am_pss  (  442): [1117,10010,com.android.managedprovisioning,5979136,2801664,0]
+09-01 00:00:56.497 I/am_proc_start(  442): [0,1275,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:00:56.520 I/am_proc_bound(  442): [0,1275,com.android.bluetooth]
+09-01 00:00:56.628 I/bt_config_source( 1275): 4
+09-01 00:00:56.686 I/am_pss  (  442): [998,10007,android.process.media,10564608,5668864,0]
+09-01 00:01:05.325 I/bt_hci_timeout( 1275): 3075
+09-01 00:01:05.348 I/am_proc_died(  442): [0,1275,com.android.bluetooth]
+09-01 00:01:05.348 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:01:05.349 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:05.578 I/am_proc_start(  442): [0,1308,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:05.601 I/am_proc_bound(  442): [0,1308,com.android.bluetooth]
+09-01 00:01:05.711 I/bt_config_source( 1308): 4
+09-01 00:01:14.408 I/bt_hci_timeout( 1308): 3075
+09-01 00:01:14.436 I/am_proc_died(  442): [0,1308,com.android.bluetooth]
+09-01 00:01:14.437 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:01:14.437 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:14.668 I/am_proc_start(  442): [0,1340,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:14.692 I/am_proc_bound(  442): [0,1340,com.android.bluetooth]
+09-01 00:01:14.800 I/bt_config_source( 1340): 4
+09-01 00:01:19.056 I/am_mem_factor(  442): [0,1]
+09-01 00:01:23.495 I/bt_hci_timeout( 1340): 3075
+09-01 00:01:23.522 I/am_proc_died(  442): [0,1340,com.android.bluetooth]
+09-01 00:01:23.522 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:01:23.522 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:23.748 I/am_proc_start(  442): [0,1376,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:23.770 I/am_proc_bound(  442): [0,1376,com.android.bluetooth]
+09-01 00:01:23.880 I/bt_config_source( 1376): 4
+09-01 00:01:32.579 I/bt_hci_timeout( 1376): 3075
+09-01 00:01:32.603 I/am_proc_died(  442): [0,1376,com.android.bluetooth]
+09-01 00:01:32.604 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:01:32.604 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:32.655 I/am_pss  (  442): [1089,10002,com.android.providers.calendar,8151040,4399104,0]
+09-01 00:01:32.693 I/am_pss  (  442): [1049,10026,com.android.calendar,9015296,5124096,0]
+09-01 00:01:32.840 I/am_proc_start(  442): [0,1409,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:32.856 I/am_proc_bound(  442): [0,1409,com.android.bluetooth]
+09-01 00:01:32.965 I/bt_config_source( 1409): 4
+09-01 00:01:41.661 I/bt_hci_timeout( 1409): 3075
+09-01 00:01:41.685 I/am_proc_died(  442): [0,1409,com.android.bluetooth]
+09-01 00:01:41.685 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:41.685 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,11000]
+09-01 00:01:41.916 I/am_proc_start(  442): [0,1453,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:41.938 I/am_proc_bound(  442): [0,1453,com.android.bluetooth]
+09-01 00:01:42.049 I/bt_config_source( 1453): 4
+09-01 00:01:50.746 I/bt_hci_timeout( 1453): 3075
+09-01 00:01:50.770 I/am_proc_died(  442): [0,1453,com.android.bluetooth]
+09-01 00:01:50.770 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,1000]
+09-01 00:01:50.771 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:51.002 I/am_proc_start(  442): [0,1484,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:01:51.023 I/am_proc_bound(  442): [0,1484,com.android.bluetooth]
+09-01 00:01:51.132 I/bt_config_source( 1484): 4
+09-01 00:01:51.138 I/force_gc(  442): Binder
+09-01 00:01:59.839 I/bt_hci_timeout( 1484): 3075
+09-01 00:01:59.890 I/am_proc_died(  442): [0,1484,com.android.bluetooth]
+09-01 00:01:59.890 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.btservice.AdapterService,1000]
+09-01 00:01:59.890 I/am_schedule_service_restart(  442): [0,com.android.bluetooth/.gatt.GattService,11000]
+09-01 00:02:00.120 I/am_proc_start(  442): [0,1515,1002,com.android.bluetooth,service,com.android.bluetooth/.btservice.AdapterService]
+09-01 00:02:00.146 I/am_proc_bound(  442): [0,1515,com.android.bluetooth]
+09-01 00:02:00.257 I/bt_config_source( 1515): 4

@@ -1,0 +1,664 @@
+[    0.000000] Booting Linux on physical CPU 0xa00
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Initializing cgroup subsys schedtune
+[    0.000000] Linux version 4.4.83+ (jenkins@1cb954549050) (gcc version 4.8 (GCC) ) #1 SMP PREEMPT Tue Jan 22 18:33:58 UTC 2019
+[    0.000000] CPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: nexell soc
+[    0.000000] cma: Reserved 256 MiB at 0xa0000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] On node 0 totalpages: 458752
+[    0.000000] free_area_init_node: node 0, pgdat c0dc73c0, node_mem_map ef03a000
+[    0.000000]   DMA zone: 1728 pages used for memmap
+[    0.000000]   DMA zone: 0 pages reserved
+[    0.000000]   DMA zone: 196608 pages, LIFO batch:31
+[    0.000000]   HighMem zone: 262144 pages, LIFO batch:31
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] PERCPU: Embedded 14 pages/cpu @eefcd000 s25024 r8192 d24128 u57344
+[    0.000000] pcpu-alloc: s25024 r8192 d24128 u57344 alloc=14*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 457024
+[    0.000000] Kernel command line: console=ttyAMA3,115200n8 loglevel=7 printk.time=1 androidboot.hardware=navi_ref androidboot.console=ttyAMA3 androidboot.serialno=0123456789ABCDEF quiet
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1538912K/1835008K available (8597K kernel code, 740K rwdata, 2876K rodata, 1208K init, 1099K bss, 33952K reserved, 262144K cma-reserved, 786432K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc086d698   (8598 kB)
+[    0.000000]       .init : 0xc0bee000 - 0xc0d1c000   (1208 kB)
+[    0.000000]       .data : 0xc0d1c000 - 0xc0dd537c   ( 741 kB)
+[    0.000000]        .bss : 0xc0dd537c - 0xc0ee82a0   (1100 kB)
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] VIC @f0804000: id 0x00041192, vendor 0x41
+[    0.000000] L2C: platform modifies aux control register: 0x02070000 -> 0x7e470000
+[    0.000000] L2C: DT/platform modifies aux control register: 0x02070000 -> 0x7e470000
+[    0.000000] L2C: DT/platform tries to modify or specify cache size
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310 ID prefetch enabled, offset 8 lines
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x4100c4c8, AUX_CTRL 0x7e470000
+[    0.000000] PLL : [0] =  800000000, [1] =  800000000, [2] =  614394000, [3] =  800000000
+[    0.000000] (0) PLL1: CPU  FCLK =  800000000, HCLK = 200000000 (G0)
+[    0.000000] (7) PLL0: CPU  FCLK =  800000000, HCLK = 800000000 (G1)
+[    0.000000] (2) PLL0: MEM  FCLK =  800000000, DCLK = 800000000, BCLK = 400000000,
+[    0.000000] PCLK = 200000000
+[    0.000000] (1) PLL0: BUS  BCLK =  400000000, PCLK = 200000000
+[    0.000000] (8) PLL0: CCI4 BCLK =  800000000, PCLK = 800000000
+[    0.000000] (3) PLL0: G3D  BCLK =  400000000
+[    0.000000] (4) PLL0: VPU  BCLK =  400000000, PCLK = 200000000
+[    0.000000] (5) PLL0: DISP BCLK =  800000000, PCLK = 800000000
+[    0.000000] CPU REF HZ: 24000000 hz (0xc0010000:0xf0808000)
+[    0.000000] clocksource: source timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 191126044627 ns
+[    0.000000] Switching to timer-based delay loop, resolution 100ns
+[    0.000000] sched_clock: 32 bits at 1kHz, resolution 1000000ns, wraps every 2147483647500000ns
+[    0.000000] Calibrating delay loop (skipped), value calculated using timer frequency.. 20.00 BogoMIPS (lpj=10000)
+[    0.001000] pid_max: default: 32768 minimum: 301
+[    0.001000] Security Framework initialized
+[    0.001000] SELinux:  Initializing.
+[    0.001000] SELinux:  Starting in permissive mode
+[    0.001000] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001000] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.002000] Initializing cgroup subsys io
+[    0.002000] Initializing cgroup subsys memory
+[    0.002000] Initializing cgroup subsys devices
+[    0.002000] Initializing cgroup subsys freezer
+[    0.002000] Initializing cgroup subsys debug
+[    0.002000] CPU: Testing write buffer coherency: ok
+[    0.002000] ftrace: allocating 30413 entries in 90 pages
+[    0.028000] Setting up static identity map for 0x40008280 - 0x400082b4
+[    0.044000] Brought up 4 CPUs
+[    0.044000] SMP: Total of 4 processors activated (80.00 BogoMIPS).
+[    0.044000] CPU: All CPU(s) started in SVC mode.
+[    0.045000] devtmpfs: initialized
+[    0.068000] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.069000] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.069000] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.081000] pinctrl core: initialized pinctrl subsystem
+[    0.081000] ECID: 8c451092:44a0028e:00000000:00000000
+[    0.081000] LOT ID : NCTN8
+[    0.082000] NET: Registered protocol family 16
+[    0.085000] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.085000] schedtune: init normalization constants...
+[    0.085000] schedtune: no energy model data
+[    0.085000] schedtune: disabled!
+[    0.089000] cpuidle: using governor ladder
+[    0.093000] cpuidle: using governor menu
+[    0.098000] nexell-reset c0012000.reset: nexell reset: nr_resets [96], base [f08c8000]
+[    0.109000] Serial: AMBA PL011 UART driver
+[    0.111000] c00a1000.serial: ttyAMA0 at MMIO 0xc00a1000 (irq = 23, base_baud = 0) is a PL011 rev3
+[    0.113000] c00a0000.serial: ttyAMA1 at MMIO 0xc00a0000 (irq = 22, base_baud = 0) is a PL011 rev3
+[    0.114000] c00a2000.serial: ttyAMA2 at MMIO 0xc00a2000 (irq = 24, base_baud = 0) is a PL011 rev3
+[    0.114000] c00a3000.serial: ttyAMA3 at MMIO 0xc00a3000 (irq = 25, base_baud = 0) is a PL011 rev3
+[    0.115000] console [ttyAMA3] enabled
+[    0.116000] c006d000.serial: ttyAMA4 at MMIO 0xc006d000 (irq = 26, base_baud = 0) is a PL011 rev3
+[    0.131000] pl08xdmac c0000000.pl08xdma: initialized 8 virtual memcpy channels
+[    0.131000] pl08xdmac c0000000.pl08xdma: initialized 16 virtual slave channels
+[    0.133000] pl08xdmac c0000000.pl08xdma: DMA: PL080 rev0 at 0xc0000000 irq 17
+[    0.133000] pl08xdmac c0001000.pl08xdma: initialized 8 virtual memcpy channels
+[    0.133000] pl08xdmac c0001000.pl08xdma: initialized 15 virtual slave channels
+[    0.135000] pl08xdmac c0001000.pl08xdma: DMA: PL080 rev0 at 0xc0001000 irq 18
+[    0.137000] SCSI subsystem initialized
+[    0.137000] usbcore: registered new interface driver usbfs
+[    0.137000] usbcore: registered new interface driver hub
+[    0.138000] usbcore: registered new device driver usb
+[    0.138000] i2c-gpio i2c@3: using pins 48 (SDA) and 50 (SCL)
+[    0.138000] i2c-gpio i2c@5: using pins 91 (SDA) and 89 (SCL)
+[    0.139000] i2c-gpio i2c@6: using pins 126 (SDA) and 125 (SCL)
+[    0.139000] i2c-gpio i2c@7: using pins 136 (SDA) and 137 (SCL)
+[    0.143000] media: Linux media interface: v0.10
+[    0.143000] Linux video capture interface: v2.00
+[    0.298000] pps_core: LinuxPPS API ver. 1 registered
+[    0.298000] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.299000] Advanced Linux Sound Architecture Driver Initialized.
+[    0.299000] Bluetooth: Core ver 2.21
+[    0.299000] NET: Registered protocol family 31
+[    0.299000] Bluetooth: HCI device and connection manager initialized
+[    0.299000] Bluetooth: HCI socket layer initialized
+[    0.299000] Bluetooth: L2CAP socket layer initialized
+[    0.300000] Bluetooth: SCO socket layer initialized
+[    0.300000] NetLabel: Initializing
+[    0.300000] NetLabel:  domain hash size = 128
+[    0.300000] NetLabel:  protocols = UNLABELED CIPSOv4
+[    0.300000] NetLabel:  unlabeled traffic allowed by default
+[    0.316000] alive wake bit[5] enabled for irq 82
+[    0.390000] clocksource: Switched to clocksource source timer
+[    0.487000] NET: Registered protocol family 2
+[    0.488000] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.488000] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.488000] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.488000] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.488000] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.488000] NET: Registered protocol family 1
+[    0.489000] Unpacking initramfs...
+[    0.578000] Freeing initrd memory: 1264K
+[    0.579000] hw perfevents: enabled with armv7_cortex_a9 PMU driver, 7 counters available
+[    0.580000] audit: initializing netlink subsys (disabled)
+[    0.580000] audit: type=2000 audit(0.579:1): initialized
+[    0.582000] VFS: Disk quotas dquot_6.6.0
+[    0.582000] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.582000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.583000] fuse init (API version 7.23)
+[    0.583000] SELinux:  Registering netfilter hooks
+[    0.590000] bounce: pool size: 64 pages
+[    0.590000] io scheduler noop registered
+[    0.590000] io scheduler cfq registered (default)
+[    0.592000] pwm-backlight supply power not found, using dummy regulator
+[    0.593000] [drm] Initialized drm 1.1.0 20060810
+[    0.594000] [drm] Load LVDS panel
+[    0.594000] [drm] not use remote panel node (/soc/display_drm_lvds) !
+[    0.595000] [drm] Load HDMI panel
+[    0.595000] [drm] irq 52 install for hdp
+[    0.596000] [drm] num of crtcs 2, FB align 1
+[    0.597000] [drm] crtc[0]: pipe.0
+[    0.597000] [drm] crtc[1]: pipe.1
+[    0.597000] [drm] Bind LVDS panel
+[    0.597000] nexell,display_drm c0102800.display_drm: bound c0101000.display_drm_lvds (ops panel_comp_ops)
+[    0.597000] [drm] Bind HDMI panel
+[    0.597000] nexell,display_drm c0102800.display_drm: bound c0101000.display_drm_hdmi (ops panel_comp_ops)
+[    0.597000] [drm] Supports vblank timestamp caching Rev 2 (21.10.2013).
+[    0.597000] [drm] No driver support for vblank timestamp query.
+[    0.597000] [drm] HDMI: disconnect
+[    0.597000] [drm] HDMI: disconnect
+[    0.597000] [drm] framebuffer width(1024), height(600) and bpp(32) buffers(1)
+[    0.608000] [drm] splash image: no reserved memory-region
+[    0.608000] [drm] splash image: memroy from HW
+[    0.608000] [drm] Copy splash image from 0x7a000000(0xf10da000) to 0xf0e81000 size 2457600
+[    0.613000] nexell,display_drm c0102800.display_drm: fb0:  frame buffer device
+[    0.618000] [drm] Initialized nexell 3.0.0 20160219 on minor 0
+[    0.621000] Mali: Mali device driver loaded for S5P4418
+[    0.630000] loop: module loaded
+[    0.631000] tun: Universal TUN/TAP device driver, 1.6
+[    0.631000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    0.631000] PPP generic driver version 2.4.2
+[    0.631000] PPP BSD Compression module registered
+[    0.631000] PPP Deflate Compression module registered
+[    0.631000] PPP MPPE Compression module registered
+[    0.631000] NET: Registered protocol family 24
+[    0.632000] usbcore: registered new interface driver asix
+[    0.632000] usbcore: registered new interface driver ax88179_178a
+[    0.632000] usbcore: registered new interface driver cdc_ether
+[    0.632000] usbcore: registered new interface driver net1080
+[    0.632000] usbcore: registered new interface driver cdc_subset
+[    0.632000] usbcore: registered new interface driver zaurus
+[    0.632000] usbcore: registered new interface driver cdc_ncm
+[    0.633000] c0040000.dwc2otg supply vusb_d not found, using dummy regulator
+[    0.633000] c0040000.dwc2otg supply vusb_a not found, using dummy regulator
+[    0.936000] dwc2 c0040000.dwc2otg: EPs: 16, dedicated fifos, 6016 entries in SPRAM
+[    1.037000] dwc2 c0040000.dwc2otg: DWC OTG Controller
+[    1.037000] dwc2 c0040000.dwc2otg: new USB bus registered, assigned bus number 1
+[    1.037000] dwc2 c0040000.dwc2otg: irq 65, io mem 0xc0040000
+[    1.037000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.037000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.037000] usb usb1: Product: DWC OTG Controller
+[    1.037000] usb usb1: Manufacturer: Linux 4.4.83+ dwc2_hsotg
+[    1.037000] usb usb1: SerialNumber: c0040000.dwc2otg
+[    1.038000] hub 1-0:1.0: USB hub found
+[    1.038000] hub 1-0:1.0: 1 port detected
+[    1.039000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    1.039000] ehci-exynos: EHCI EXYNOS driver
+[    1.040000] exynos-ehci c0030000.ehci: EHCI Host Controller
+[    1.040000] exynos-ehci c0030000.ehci: new USB bus registered, assigned bus number 2
+[    1.041000] exynos-ehci c0030000.ehci: irq 66, io mem 0xc0030000
+[    1.047000] exynos-ehci c0030000.ehci: USB 2.0 started, EHCI 1.00
+[    1.047000] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.047000] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.047000] usb usb2: Product: EHCI Host Controller
+[    1.047000] usb usb2: Manufacturer: Linux 4.4.83+ ehci_hcd
+[    1.047000] usb usb2: SerialNumber: c0030000.ehci
+[    1.047000] hub 2-0:1.0: USB hub found
+[    1.047000] hub 2-0:1.0: 3 ports detected
+[    1.048000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.048000] ohci-exynos: OHCI EXYNOS driver
+[    1.048000] exynos-ohci c0020000.ohci: USB Host Controller
+[    1.048000] exynos-ohci c0020000.ohci: new USB bus registered, assigned bus number 3
+[    1.049000] exynos-ohci c0020000.ohci: irq 66, io mem 0xc0020000
+[    1.104000] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001
+[    1.104000] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.104000] usb usb3: Product: USB Host Controller
+[    1.104000] usb usb3: Manufacturer: Linux 4.4.83+ ohci_hcd
+[    1.104000] usb usb3: SerialNumber: c0020000.ohci
+[    1.104000] hub 3-0:1.0: USB hub found
+[    1.104000] hub 3-0:1.0: 3 ports detected
+[    1.105000] usbcore: registered new interface driver usb-storage
+[    1.279000] usb2514 5-002c: switched to HUB mode
+[    1.279000] usb2514 5-002c: usb2514_probe: probed in hub mode
+[    1.280000] mousedev: PS/2 mouse device common for all mice
+[    1.280000] usbcore: registered new interface driver xpad
+[    1.280000] usbcore: registered new interface driver usb_acecad
+[    1.280000] usbcore: registered new interface driver aiptek
+[    1.281000] usbcore: registered new interface driver gtco
+[    1.281000] usbcore: registered new interface driver hanwang
+[    1.281000] usbcore: registered new interface driver kbtab
+[    1.281000] input: TSC2007 Touchscreen as /devices/platform/c0000000.soc/c00a6000.i2c/i2c-2/2-0048/input/input0
+[    1.283000] nx-rtc c0010c00.rtc: [RTC] day=2009.09.01 time=00:00:00
+[    1.283000] nx-rtc c0010c00.rtc: rtc core: registered nx as rtc0
+[    1.283000] i2c /dev entries driver
+[    1.284000] nx-v4l2 nx-v4l2: nx_v4l2_probe success
+[    1.288000] +++ nx_mpegts_probe +++
+[    1.288000] nx_mpegts_probe - channel number 1: 1
+[    1.289000] register_v4l2 - channel number : 1
+[    1.289000] nx_video_mpegts_create - addr : 0xed73bc00
+[    1.290000] nx_video_mpegts_vbq_init - channel number : 1
+[    1.290000] nx_video_mpegts_vbq_init - video virt addr : 0xed73bc00
+[    1.290000] nx_mpegts_probe - channel number 2: 1
+[    1.290000] --- nx_mpegts_probe ---
+[    1.290000] nx-vpu c0080000.video-codec: encoder registered as /dev/video14
+[    1.290000] nx-vpu c0080000.video-codec: decoder registered as /dev/video15
+[    1.299000] usbcore: registered new interface driver uvcvideo
+[    1.299000] USB Video Class driver (1.1.1)
+[    1.302000] s3c2410-wdt c0019000.watchdog: watchdog inactive, reset disabled, irq disabled
+[    1.302000] device-mapper: uevent: version 1.0.3
+[    1.302000] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    1.302000] Bluetooth: HCI UART driver ver 2.3
+[    1.302000] Bluetooth: HCI UART protocol H4 registered
+[    1.302000] Bluetooth: HCI UART protocol BCM registered
+[    1.303000] bcm434545_bluetooth_probe: inverted-power-control property not found
+[    1.303000] bcm434545_bluetooth_probe: run normal power control (onoff=0)
+[    1.303000] [BT] Bluetooth Power On.
+[    1.303000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[    1.485000] usb 2-1: new high-speed USB device number 2 using exynos-ehci
+[    1.599000] usb 2-1: New USB device found, idVendor=0424, idProduct=2512
+[    1.599000] usb 2-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    1.600000] hub 2-1:1.0: USB hub found
+[    1.600000] hub 2-1:1.0: 4 ports detected
+[    1.704000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[    1.805000] bcm434545_bluetooth bt_control: bcm434545_bluetooth_probe End
+[    1.805000] voltage supply : vdd_core_regulator
+[    1.805000] cannot find dvfs-tables
+[    1.805000] DVFS: ASV[0] IDS(10mA,  0) Ro(110,  0)
+[    1.805000] ASV  0 =  1400000khz,  1350000 uV
+[    1.805000] ASV  1 =  1300000khz,  1300000 uV
+[    1.805000] ASV  2 =  1200000khz,  1250000 uV
+[    1.805000] ASV  3 =  1100000khz,  1200000 uV
+[    1.805000] ASV  4 =  1000000khz,  1175000 uV
+[    1.805000] ASV  5 =   900000khz,  1150000 uV
+[    1.805000] ASV  6 =   800000khz,  1125000 uV
+[    1.805000] ASV  7 =   700000khz,  1100000 uV
+[    1.805000] ASV  8 =   600000khz,  1075000 uV
+[    1.805000] ASV  9 =   500000khz,  1075000 uV
+[    1.805000] ASV 10 =   400000khz,  1075000 uV
+[    1.807000] DVFS: regulator vdd_core_regulator
+[    1.807000] DVFS: cpu DVFS with PLL.1 [tables=11]
+[    1.809000] running cpufreq without cooling device: -38
+[    1.815000] Synopsys Designware Multimedia Card Interface Driver
+[    1.815000] dwmmc_nexell c0062000.dwmmc: fifo-depth property not found, using value of FIFOTH register as default
+[    1.815000] dwmmc_nexell c0062000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.815000] dwmmc_nexell c0062000.dwmmc: Using internal DMA controller.
+[    1.815000] dwmmc_nexell c0062000.dwmmc: Version ID is 250a
+[    1.815000] dwmmc_nexell c0062000.dwmmc: DW MMC controller at irq 59,32 bit host data width,16 deep fifo
+[    1.815000] dwmmc_nexell c0062000.dwmmc: No vmmc regulator found
+[    1.815000] dwmmc_nexell c0062000.dwmmc: No vqmmc regulator found
+[    1.837000] mmc0: run _mmc_detect_change()
+[    1.837000] dwmmc_nexell c0062000.dwmmc: 1 slots initialized
+[    1.837000] dwmmc_nexell c0068000.dwmmc: fifo-depth property not found, using value of FIFOTH register as default
+[    1.837000] dwmmc_nexell c0068000.dwmmc: IDMAC supports 32-bit address mode.
+[    1.837000] dwmmc_nexell c0068000.dwmmc: Using internal DMA controller.
+[    1.837000] dwmmc_nexell c0068000.dwmmc: Version ID is 250a
+[    1.837000] dwmmc_nexell c0068000.dwmmc: DW MMC controller at irq 60,32 bit host data width,32 deep fifo
+[    1.837000] dwmmc_nexell c0068000.dwmmc: No vmmc regulator found
+[    1.837000] dwmmc_nexell c0068000.dwmmc: No vqmmc regulator found
+[    1.837000] dwmmc_nexell c0068000.dwmmc: Got CD GPIO
+[    1.859000] mmc1: run _mmc_detect_change()
+[    1.859000] dwmmc_nexell c0068000.dwmmc: 1 slots initialized
+[    1.859000] hidraw: raw HID events driver (C) Jiri Kosina
+[    1.859000] usbcore: registered new interface driver usbhid
+[    1.859000] usbhid: USB HID core driver
+[    1.860000] ashmem: initialized
+[    1.862000] alc562x-codec 3-001a: Found codec id : alc5623
+[    1.874000] usb 2-1.1: new high-speed USB device number 3 using exynos-ehci
+[    1.880000] mmc0: MAN_BKOPS_EN bit is not set
+[    1.882000] mmc_host mmc0: Bus speed (slot 0) = 50000000Hz (slot req 52000000Hz, actual 50000000HZ div = 0)
+[    1.882000] mmc0: new high speed MMC card at address 0001
+[    1.882000] mmcblk0: mmc0:0001 8GND3R 7.28 GiB 
+[    1.882000] mmcblk0boot0: mmc0:0001 8GND3R partition 1 4.00 MiB
+[    1.883000] mmcblk0boot1: mmc0:0001 8GND3R partition 2 4.00 MiB
+[    1.884000] mmcblk0rpmb: mmc0:0001 8GND3R partition 3 512 KiB
+[    1.886000]  mmcblk0: p1 p2 p3 p4 < p5 p6 p7 p8 >
+[    1.962000] usb 2-1.1: New USB device found, idVendor=0bda, idProduct=8179
+[    1.962000] usb 2-1.1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    1.962000] usb 2-1.1: Product: 802.11n NIC
+[    1.962000] usb 2-1.1: Manufacturer: Realtek
+[    1.962000] usb 2-1.1: SerialNumber: 00E04C0001
+[    2.316000] nexell-pcm nexell-pcm: snd pcm: register sound platform 'nexell-pcm'
+[    2.318000] nexell-i2s c0055000.i2s: snd i2s: ch 0, master, iis mode, 48000(47999)hz, 32 FBITs,
+[    2.318000] nexell-i2s c0055000.i2s: MCLK=12287880hz, RFS=256
+[    2.320000] nexell-i2s c0056000.i2s: snd i2s: ch 1, master, iis mode, 48000(47999)hz, 32 FBITs,
+[    2.320000] nexell-i2s c0056000.i2s: MCLK=12287880hz, RFS=256
+[    2.322000] nexell-i2s c0057000.i2s: snd i2s: ch 2, slave, iis mode, 16000(0)hz, 32 FBITs,
+[    2.322000] nexell-i2s c0057000.i2s: MCLK=0hz, RFS=256
+[    2.398000] nexell-spdif-tx c0059000.spdiftx: spdif-tx: 48000(47999)Hz, MCLK=12287880hz
+[    2.402000] nx-simple-card sound: rt5640-aif1 <-> c0055000.i2s mapping ok
+[    2.406000] nx-simple-card sound: alc5623-hifi <-> c0056000.i2s mapping ok
+[    2.408000] nx-simple-card sound: snd-null-voice <-> c0057000.i2s mapping ok
+[    2.409000] nx-simple-card sound: dit-hifi <-> c0059000.spdiftx mapping ok
+[    2.425000] u32 classifier
+[    2.425000]     Actions configured
+[    2.425000] Netfilter messages via NETLINK v0.30.
+[    2.425000] nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+[    2.426000] ctnetlink v0.93: registering with nfnetlink.
+[    2.427000] xt_time: kernel timezone is -0000
+[    2.427000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    2.428000] arp_tables: (C) 2002 David S. Miller
+[    2.428000] Initializing XFRM netlink socket
+[    2.428000] NET: Registered protocol family 10
+[    2.429000] mip6: Mobile IPv6
+[    2.429000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[    2.430000] NET: Registered protocol family 17
+[    2.430000] NET: Registered protocol family 15
+[    2.430000] Bluetooth: RFCOMM TTY layer initialized
+[    2.430000] Bluetooth: RFCOMM socket layer initialized
+[    2.430000] Bluetooth: RFCOMM ver 1.11
+[    2.430000] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    2.430000] Bluetooth: BNEP filters: protocol multicast
+[    2.430000] Bluetooth: BNEP socket layer initialized
+[    2.430000] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    2.430000] Bluetooth: HIDP socket layer initialized
+[    2.431000] Key type dns_resolver registered
+[    2.431000] ThumbEE CPU extension supported.
+[    2.431000] Registering SWP/SWPB emulation handler
+[    2.432000] registered taskstats version 1
+[    2.434000] isdbt_init 20150918
+[    2.434000] isdbt_hw_setting
+[    2.435000] input: gpio_keys as /devices/platform/gpio_keys/input/input1
+[    2.436000] nx-rtc c0010c00.rtc: setting system clock to 2009-09-01 00:00:01 UTC (1251763201)
+[    2.441000] ALSA device list:
+[    2.441000]   #0: s5p4418 navi_ref rev01 Audio
+[    2.442000] uart-pl011 c00a3000.serial: no DMA platform data
+[    2.443000] Freeing unused kernel memory: 1208K
+[    2.443000] This architecture does not have kernel memory protection.
+[    2.448000] init: init first stage started!
+[    2.454000] SELinux: 2048 avtab hash slots, 6610 rules.
+[    2.460000] SELinux: 2048 avtab hash slots, 6610 rules.
+[    2.460000] SELinux:  1 users, 2 roles, 649 types, 0 bools, 1 sens, 1024 cats
+[    2.460000] SELinux:  63 classes, 6610 rules
+[    2.463000] SELinux:  Completing initialization.
+[    2.463000] SELinux:  Setting up existing superblocks.
+[    2.528000] audit: type=1403 audit(1251763201.591:2): policy loaded auid=4294967295 ses=4294967295
+[    2.529000] audit: type=1404 audit(1251763201.592:3): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+[    2.536000] init: (Initializing SELinux enforcing took 0.09s.)
+[    2.541000] init: init second stage started!
+[    2.549000] init: Running restorecon...
+[    2.593000] init: waitpid failed: No child processes
+[    2.599000] init: (Loading properties from /default.prop took 0.00s.)
+[    2.603000] init: (Parsing /init.environ.rc took 0.00s.)
+[    2.605000] init: (Parsing /init.usb.rc took 0.00s.)
+[    2.607000] init: (Parsing init.navi_ref.usb.rc took 0.00s.)
+[    2.607000] init: (Parsing /init.navi_ref.rc took 0.00s.)
+[    2.608000] init: (Parsing /init.usb.configfs.rc took 0.00s.)
+[    2.608000] init: (Parsing /init.zygote32.rc took 0.00s.)
+[    2.608000] init: (Parsing /init.rc took 0.01s.)
+[    2.609000] init: Starting service 'ueventd'...
+[    2.610000] init: Waiting for /dev/.coldboot_done...
+[    2.612000] ueventd: ueventd started!
+[    2.762000] ueventd: Coldboot took 0.15s.
+[    2.771000] init: Waiting for /dev/.coldboot_done took 0.16s.
+[    2.771000] init: Failed to read from /dev/hw_random: No such device
+[    2.786000] init: write_file: Unable to open '/proc/sys/kernel/sched_tunable_scaling': No such file or directory
+[    2.786000] init: write_file: Unable to open '/proc/sys/kernel/sched_latency_ns': No such file or directory
+[    2.786000] init: write_file: Unable to open '/proc/sys/kernel/sched_wakeup_granularity_ns': No such file or directory
+[    2.793000] init: write_file: Unable to open '/proc/sys/abi/swp': No such file or directory
+[    2.793000] init: Failed to read from /dev/hw_random: No such device
+[    2.800000] init: write_file: Unable to open '/sys/class/thermal/thermal_zone0/mode': No such file or directory
+[    2.801000] init: write_file: Unable to write to '/dev/cpuset/foreground/mems': Math result not representable
+[    2.801000] init: write_file: Unable to write to '/dev/cpuset/foreground/boost/mems': Math result not representable
+[    2.801000] init: write_file: Unable to write to '/dev/cpuset/background/mems': Math result not representable
+[    2.813000] EXT4-fs (mmcblk0p2): mounted filesystem with ordered data mode. Opts: (null)
+[    2.813000] fs_mgr: __mount(source=/dev/block/mmcblk0p2,target=/system,type=ext4)=0
+[    2.814000] EXT4-fs (mmcblk0p5): Ignoring removed nomblk_io_submit option
+[    2.822000] EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    2.822000] fs_mgr: check_fs(): mount(/dev/block/mmcblk0p5,/cache,ext4)=0: Success
+[    2.824000] fs_mgr: check_fs(): unmount(/cache) succeeded
+[    2.825000] fs_mgr: Running /system/bin/e2fsck on /dev/block/mmcblk0p5
+[    2.844000] random: e2fsck: uninitialized urandom read (40 bytes read, 8 bits of entropy available)
+[    2.979000] audit: type=1400 audit(1251763202.042:4): avc:  denied  { getattr } for  pid=117 comm="e2fsck" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.980000] audit: type=1400 audit(1251763202.043:5): avc:  denied  { getattr } for  pid=117 comm="e2fsck" path="/dev/block/mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.980000] audit: type=1400 audit(1251763202.043:6): avc:  denied  { read write } for  pid=117 comm="e2fsck" name="mmcblk0p5" dev="tmpfs" ino=10058 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    2.991000] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    2.991000] 
+[    2.991000] e2fsck: /system/bin/e2fsck: Permission denied while trying to open /dev/block/mmcblk0p5
+[    2.991000] 
+[    2.991000] e2fsck: 
+[    2.991000] 
+[    2.991000] e2fsck: You must have r/w access to the filesystem or be root
+[    2.991000] 
+[    2.991000] e2fsck: e2fsck terminated by exit(8)
+[    2.991000] 
+[    2.993000] EXT4-fs (mmcblk0p5): Ignoring removed nomblk_io_submit option
+[    3.002000] EXT4-fs (mmcblk0p5): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[    3.002000] fs_mgr: __mount(source=/dev/block/mmcblk0p5,target=/cache,type=ext4)=0
+[    3.003000] EXT4-fs (mmcblk0p8): Ignoring removed nomblk_io_submit option
+[    3.014000] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: errors=remount-ro,nomblk_io_submit
+[    3.014000] fs_mgr: check_fs(): mount(/dev/block/mmcblk0p8,/data,ext4)=0: Success
+[    3.015000] fs_mgr: check_fs(): unmount(/data) succeeded
+[    3.015000] fs_mgr: Running /system/bin/e2fsck on /dev/block/mmcblk0p8
+[    3.018000] random: e2fsck: uninitialized urandom read (40 bytes read, 15 bits of entropy available)
+[    3.041000] audit: type=1400 audit(1251763202.104:7): avc:  denied  { getattr } for  pid=122 comm="e2fsck" path="/dev/block/mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    3.042000] audit: type=1400 audit(1251763202.105:8): avc:  denied  { getattr } for  pid=122 comm="e2fsck" path="/dev/block/mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    3.042000] audit: type=1400 audit(1251763202.105:9): avc:  denied  { read write } for  pid=122 comm="e2fsck" name="mmcblk0p8" dev="tmpfs" ino=10067 scontext=u:r:fsck:s0 tcontext=u:object_r:block_device:s0 tclass=blk_file permissive=0
+[    3.044000] e2fsck: e2fsck 1.42.9 (28-Dec-2013)
+[    3.044000] 
+[    3.044000] e2fsck: /system/bin/e2fsck: Permission denied while trying to open /dev/block/mmcblk0p8
+[    3.044000] 
+[    3.044000] e2fsck: 
+[    3.044000] 
+[    3.044000] e2fsck: You must have r/w access to the filesystem or be root
+[    3.044000] 
+[    3.044000] e2fsck: e2fsck terminated by exit(8)
+[    3.044000] 
+[    3.045000] EXT4-fs (mmcblk0p8): Ignoring removed nomblk_io_submit option
+[    3.054000] EXT4-fs (mmcblk0p8): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+[    3.054000] fs_mgr: __mount(source=/dev/block/mmcblk0p8,target=/data,type=ext4)=0
+[    3.062000] init: (Parsing /system/etc/init/atrace.rc took 0.00s.)
+[    3.063000] init: (Parsing /system/etc/init/audioserver.rc took 0.00s.)
+[    3.063000] init: (Parsing /system/etc/init/bootanim.rc took 0.00s.)
+[    3.064000] init: (Parsing /system/etc/init/bootstat.rc took 0.00s.)
+[    3.065000] init: (Parsing /system/etc/init/cameraserver.rc took 0.00s.)
+[    3.065000] init: (Parsing /system/etc/init/debuggerd.rc took 0.00s.)
+[    3.066000] init: (Parsing /system/etc/init/drmserver.rc took 0.00s.)
+[    3.067000] init: (Parsing /system/etc/init/dumpstate.rc took 0.00s.)
+[    3.067000] init: (Parsing /system/etc/init/gatekeeperd.rc took 0.00s.)
+[    3.068000] init: (Parsing /system/etc/init/init-debug.rc took 0.00s.)
+[    3.068000] init: (Parsing /system/etc/init/installd.rc took 0.00s.)
+[    3.069000] init: (Parsing /system/etc/init/keystore.rc took 0.00s.)
+[    3.069000] init: (Parsing /system/etc/init/lmkd.rc took 0.00s.)
+[    3.070000] init: (Parsing /system/etc/init/logcatd.rc took 0.00s.)
+[    3.071000] init: (Parsing /system/etc/init/logd.rc took 0.00s.)
+[    3.071000] init: (Parsing /system/etc/init/mdnsd.rc took 0.00s.)
+[    3.072000] init: (Parsing /system/etc/init/mediacodec.rc took 0.00s.)
+[    3.072000] init: (Parsing /system/etc/init/mediadrmserver.rc took 0.00s.)
+[    3.073000] init: (Parsing /system/etc/init/mediaextractor.rc took 0.00s.)
+[    3.073000] init: (Parsing /system/etc/init/mediaserver.rc took 0.00s.)
+[    3.074000] init: (Parsing /system/etc/init/mtpd.rc took 0.00s.)
+[    3.075000] init: (Parsing /system/etc/init/netd.rc took 0.00s.)
+[    3.075000] init: (Parsing /system/etc/init/perfprofd.rc took 0.00s.)
+[    3.076000] init: (Parsing /system/etc/init/racoon.rc took 0.00s.)
+[    3.076000] init: (Parsing /system/etc/init/servicemanager.rc took 0.00s.)
+[    3.077000] init: (Parsing /system/etc/init/surfaceflinger.rc took 0.00s.)
+[    3.077000] init: (Parsing /system/etc/init/uncrypt.rc took 0.00s.)
+[    3.078000] init: (Parsing /system/etc/init/vdc.rc took 0.00s.)
+[    3.079000] init: (Parsing /system/etc/init/vold.rc took 0.00s.)
+[    3.081000] init: Starting service 'logd'...
+[    3.084000] init: SELinux: Could not set context for /sys/kernel/debug/tracing:  Operation not supported on transport endpoint
+[    3.102000] random: logd: uninitialized urandom read (40 bytes read, 16 bits of entropy available)
+[    3.121000] init: (Loading properties from /system/build.prop took 0.00s.)
+[    3.121000] init: (Loading properties from /vendor/build.prop took 0.00s.)
+[    3.121000] init: (Loading properties from /factory/factory.prop took 0.00s.)
+[    3.123000] init: Starting service 'servicemanager'...
+[    3.125000] init: Starting service 'surfaceflinger'...
+[    3.127000] init: Starting service 'bootanim'...
+[    3.133000] random: surfaceflinger: uninitialized urandom read (40 bytes read, 19 bits of entropy available)
+[    3.134000] init: Starting service 'debuggerd'...
+[    3.135000] init: do_start: Service debuggerd64 not found
+[    3.136000] random: bootanimation: uninitialized urandom read (40 bytes read, 19 bits of entropy available)
+[    3.142000] init: Starting service 'vold'...
+[    3.147000] random: servicemanager: uninitialized urandom read (40 bytes read, 19 bits of entropy available)
+[    3.149000] init: Not bootcharting.
+[    3.160000] random: debuggerd: uninitialized urandom read (40 bytes read, 21 bits of entropy available)
+[    3.167000] random: vold: uninitialized urandom read (40 bytes read, 21 bits of entropy available)
+[    3.194000] logd.auditd: start
+[    3.194000] logd.klogd: 3193953000
+[    3.351000] random: vdc: uninitialized urandom read (40 bytes read, 31 bits of entropy available)
+[    3.486000] init: Starting service 'exec 1 (/system/bin/tzdatacheck)'...
+[    3.506000] random: tzdatacheck: uninitialized urandom read (40 bytes read, 38 bits of entropy available)
+[    3.527000] init: Service 'exec 1 (/system/bin/tzdatacheck)' (pid 147) exited with status 0
+[    3.538000] init: Starting service 'exec 2 (/system/bin/bootstat)'...
+[    3.579000] init: Service 'exec 2 (/system/bin/bootstat)' (pid 148) exited with status 0
+[    3.579000] init: (Loading properties from /data/local.prop took 0.00s.)
+[    3.612000] [drm] HDMI: disconnect
+[    3.620000] [drm] HDMI: disconnect
+[    3.620000] [drm] HDMI: disconnect
+[    3.643000] init: Starting service 'logd-reinit'...
+[    3.646000] init: write_file: Unable to open '/proc/sys/vm/min_free_order_shift': No such file or directory
+[    3.649000] init: Starting service 'healthd'...
+[    3.651000] init: Starting service 'lmkd'...
+[    3.653000] init: write_file: Unable to open '/proc/sys/kernel/sched_boost': No such file or directory
+[    3.658000] file system registered
+[    3.662000] using random self ethernet address
+[    3.662000] using random host ethernet address
+[    3.668000] init: Starting service 'console'...
+[    3.671000] init: Starting service 'adbd'...
+[    3.675000] init: cannot find '/system/bin/update_verifier' (No such file or directory), disabling 'exec 3 (/system/bin/update_verifier)'
+[    3.675000] read descriptors
+[    3.675000] read descriptors
+[    3.675000] read strings
+[    3.688000] healthd: No battery devices found
+[    3.688000] healthd: battery l=100 v=0 t=42.4 h=2 st=2 chg=a
+[    3.689000] init: cannot find '/system/bin/install-recovery.sh' (No such file or directory), disabling 'flash_recovery'
+[    3.702000] init: Starting service 'zygote'...
+[    3.703000] init: Starting service 'audioserver'...
+[    3.708000] init: Starting service 'cameraserver'...
+[    3.710000] init: couldn't write 174 to /dev/cpuset/camera-daemon/tasks: No such file or directory
+[    3.710000] init: Starting service 'drm'...
+[    3.712000] init: Starting service 'installd'...
+[    3.714000] init: Starting service 'keystore'...
+[    3.716000] init: Starting service 'mediacodec'...
+[    3.718000] init: Starting service 'mediadrm'...
+[    3.725000] init: Starting service 'mediaextractor'...
+[    3.728000] init: Starting service 'media'...
+[    3.730000] init: Starting service 'netd'...
+[    3.732000] init: Starting service 'usbmuxd'...
+[    3.734000] init: Starting service 'gatekeeperd'...
+[    3.739000] init: Starting service 'perfprofd'...
+[    3.741000] dwc2 c0040000.dwc2otg: bound driver configfs-gadget
+[    3.777000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    3.781000] logd.daemon: reinit
+[    3.781000] init: Service 'logd-reinit' (pid 161) exited with status 0
+[    3.820000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    4.099000] [drm] request CRTC.49 IRQ 0
+[    4.220000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    4.289000] android_work: sent uevent USB_STATE=CONNECTED
+[    4.309000] nx-clipper c0000000.soc:clipper1@c0064000: [CLI 1] enable 0
+[    4.324000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    4.393000] dwc2 c0040000.dwc2otg: new address 28
+[    4.415000] configfs-gadget gadget: high-speed config #1: b
+[    4.416000] android_work: sent uevent USB_STATE=CONFIGURED
+[    6.627000] random: nonblocking pool is initialized
+[    8.643000] android_work: sent uevent USB_STATE=DISCONNECTED
+[    8.644000] android_work: did not send uevent (0 0   (null))
+[    8.645000] init: Service 'adbd' (pid 167) exited with status 1
+[    8.645000] init: Service 'adbd' (pid 167) killing any children in process group
+[    8.646000] init: Starting service 'adbd'...
+[    8.664000] read descriptors
+[    8.664000] read descriptors
+[    8.664000] read strings
+[    8.666000] dwc2 c0040000.dwc2otg: bound driver configfs-gadget
+[    8.888000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    8.957000] android_work: sent uevent USB_STATE=CONNECTED
+[    8.992000] dwc2 c0040000.dwc2otg: new device is high-speed
+[    9.061000] dwc2 c0040000.dwc2otg: new address 29
+[    9.083000] configfs-gadget gadget: high-speed config #1: b
+[    9.084000] android_work: sent uevent USB_STATE=CONFIGURED
+[    9.140000] capability: warning: `main' uses 32-bit capabilities (legacy support in use)
+[   16.350000] healthd: battery l=100 v=0 t=42.4 h=2 st=2 chg=a
+[   18.366000] acc_open
+[   18.366000] acc_release
+[   21.247000] [BT] Bluetooth Power Off.
+[   21.247000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   21.248000] [BT] Bluetooth Power On.
+[   21.248000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   21.649000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   21.751000] uart-pl011 c00a0000.serial: DMA channel TX dma1chan0
+[   21.751000] uart-pl011 c00a0000.serial: DMA channel RX dma1chan1
+[   23.171000] init: Service 'bootanim' (pid 128) exited with status 0
+[   23.242000] init: write_file: Unable to open '/proc/sys/kernel/sched_boost': No such file or directory
+[   23.253000] init: cannot find '/system/bin/init_gms_perm.sh' (No such file or directory), disabling 'exec 4 (/system/bin/init_gms_perm.sh)'
+[   23.267000] init: write_file: Unable to open '/sys/class/thermal/thermal_zone0/mode': No such file or directory
+[   23.268000] init: Starting service 'exec 5 (/system/bin/iproxy.sh)'...
+[   23.301000] init: Service 'exec 5 (/system/bin/iproxy.sh)' (pid 878) exited with status 0
+[   23.314000] init: Starting service 'exec 6 (/system/bin/bootstat)'...
+[   23.385000] init: Service 'exec 6 (/system/bin/bootstat)' (pid 889) exited with status 0
+[   23.385000] init: Starting service 'exec 7 (/system/bin/bootstat)'...
+[   23.414000] init: Service 'exec 7 (/system/bin/bootstat)' (pid 890) exited with status 0
+[   23.414000] init: Starting service 'exec 8 (/system/bin/bootstat)'...
+[   23.439000] init: Service 'exec 8 (/system/bin/bootstat)' (pid 891) exited with status 0
+[   23.440000] init: Starting service 'exec 9 (/system/bin/bootstat)'...
+[   23.469000] init: Service 'exec 9 (/system/bin/bootstat)' (pid 892) exited with status 0
+[   30.357000] [BT] Bluetooth Power Off.
+[   30.357000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   30.358000] [BT] Bluetooth Power On.
+[   30.358000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   30.759000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   39.443000] [BT] Bluetooth Power Off.
+[   39.443000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   39.443000] [BT] Bluetooth Power On.
+[   39.443000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   39.844000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   48.536000] [BT] Bluetooth Power Off.
+[   48.536000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   48.537000] [BT] Bluetooth Power On.
+[   48.537000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   48.938000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   57.600000] [BT] Bluetooth Power Off.
+[   57.600000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   57.601000] [BT] Bluetooth Power On.
+[   57.601000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   58.002000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   66.683000] [BT] Bluetooth Power Off.
+[   66.683000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   66.683000] [BT] Bluetooth Power On.
+[   66.683000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   67.084000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   75.771000] [BT] Bluetooth Power Off.
+[   75.771000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   75.771000] [BT] Bluetooth Power On.
+[   75.771000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   76.172000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   84.852000] [BT] Bluetooth Power Off.
+[   84.852000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   84.852000] [BT] Bluetooth Power On.
+[   84.852000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   85.253000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[   93.935000] [BT] Bluetooth Power Off.
+[   93.935000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[   93.936000] [BT] Bluetooth Power On.
+[   93.936000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[   94.337000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[  103.021000] [BT] Bluetooth Power Off.
+[  103.021000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[  103.021000] [BT] Bluetooth Power On.
+[  103.021000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[  103.422000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[  112.113000] [BT] Bluetooth Power Off.
+[  112.113000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[  112.114000] [BT] Bluetooth Power On.
+[  112.114000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[  112.517000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)
+[  121.227000] [BT] Bluetooth Power Off.
+[  121.227000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=0)
+[  121.228000] [BT] Bluetooth Power On.
+[  121.228000] bcm434545_bt_rfkill_set_power: run normal power reset (onoff=0)
+[  121.629000] bcm434545_bt_rfkill_set_power: run normal power control (onoff=1)

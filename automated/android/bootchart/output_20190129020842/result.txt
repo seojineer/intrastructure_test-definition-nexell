@@ -1,0 +1,2 @@
+stop_bootchart pass
+rm_start_file pass

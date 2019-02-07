@@ -1,0 +1,9 @@
+BOOTTIME_LOGCAT_ALL_COLLECT pass
+BOOTTIME_LOGCAT_EVENTS_COLLECT pass
+BOOTTIME_DMESG_COLLECT pass
+==============list of files under /data/local/tmp//boottime/ starts from here:
+-rw-rw-rw- 1 root root  49343 2009-09-01 00:02 /data/local/tmp//boottime/dmesg_1.log
+-rw-rw-rw- 1 root root 353270 2009-09-01 00:02 /data/local/tmp//boottime/logcat_all_1.log
+-rw-rw-rw- 1 root root  29763 2009-09-01 00:02 /data/local/tmp//boottime/logcat_events_1.log
+-rw-rw-rw- 1 root root     97 2009-09-01 00:02 /data/local/tmp//boottime/result.txt
+==============list of files under /data/local/tmp//boottime/ ends from here:

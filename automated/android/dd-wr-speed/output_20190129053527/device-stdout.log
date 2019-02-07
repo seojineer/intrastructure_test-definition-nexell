@@ -1,0 +1,137 @@
++ ITERATION=5 
++ OUTPUT=/data/local/tmp/dd-wr-speed 
++ PARTITION= 
++ export 'PATH=/data/local/tmp/bin:/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin'
++ '[' 2 -lt 2 ']'
++ '[' -d /data/local/tmp/dd-wr-speed ']'
++ date -r /data/local/tmp/dd-wr-speed +%Y%m%d%H%M%S
++ mv /data/local/tmp/dd-wr-speed /data/local/tmp/dd-wr-speed_20090901001140
++ mkdir -p /data/local/tmp/dd-wr-speed
++ cd /data/local/tmp/dd-wr-speed
++ '[' -n  ']'
++ seq 5
+
++ echo
++ echo 'INFO: Running dd write test [1/5]'
+INFO: Running dd write test [1/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 75.633845 seconds, 13.5MB/s
++ echo
+
++ echo 'INFO: Running dd read test [1/5]'
+INFO: Running dd read test [1/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=dd.img' 'of=/dev/null' 'bs=1048576' 'count=1024'
++ tee -a /data/local/tmp/dd-wr-speed/dd-read-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.030793 seconds, 22.2MB/s
++ rm -f dd.img
++ echo
+
++ echo 'INFO: Running dd write test [2/5]'
+INFO: Running dd write test [2/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 75.845589 seconds, 13.5MB/s
++ echo
+
++ echo 'INFO: Running dd read test [2/5]'
+INFO: Running dd read test [2/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=dd.img' 'of=/dev/null' 'bs=1048576' 'count=1024'
++ tee -a /data/local/tmp/dd-wr-speed/dd-read-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 45.948243 seconds, 22.3MB/s
++ rm -f dd.img
++ echo
+
++ echo 'INFO: Running dd write test [3/5]'
+INFO: Running dd write test [3/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 73.708231 seconds, 13.9MB/s
++ echo
+
++ echo 'INFO: Running dd read test [3/5]'
+INFO: Running dd read test [3/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=dd.img' 'of=/dev/null' 'bs=1048576' 'count=1024'
++ tee -a /data/local/tmp/dd-wr-speed/dd-read-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.070189 seconds, 22.2MB/s
++ rm -f dd.img
++ echo
+
++ echo 'INFO: Running dd write test [4/5]'
+INFO: Running dd write test [4/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 73.849437 seconds, 13.9MB/s
+
+INFO: Running dd read test [4/5]
++ echo
++ echo 'INFO: Running dd read test [4/5]'
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=dd.img' 'of=/dev/null' 'bs=1048576' 'count=1024'
++ tee -a /data/local/tmp/dd-wr-speed/dd-read-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 46.001600 seconds, 22.3MB/s
++ rm -f dd.img
++ echo
+
++ echo 'INFO: Running dd write test [5/5]'
+INFO: Running dd write test [5/5]
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ tee -a /data/local/tmp/dd-wr-speed/dd-write-output.txt
++ 2>&1 
++ busybox dd 'if=/dev/zero' 'of=dd.img' 'bs=1048576' 'count=1024' 'conv=fsync'
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 74.218175 seconds, 13.8MB/s
+
+INFO: Running dd read test [5/5]
++ echo
++ echo 'INFO: Running dd read test [5/5]'
++ >/proc/sys/vm/drop_caches 
++ echo 3
++ 2>&1 
++ busybox dd 'if=dd.img' 'of=/dev/null' 'bs=1048576' 'count=1024'
++ tee -a /data/local/tmp/dd-wr-speed/dd-read-output.txt
+1024+0 records in
+1024+0 records out
+1073741824 bytes (1.0GB) copied, 45.922487 seconds, 22.3MB/s
++ rm -f dd.img

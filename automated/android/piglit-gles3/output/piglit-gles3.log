@@ -1,0 +1,22 @@
+/data/local/tmp/piglit-gles3/device-script.sh[67]: /vendor/bin/drawarrays-vertexid_gles3: not found
+drawarrays-vertexid_gles3: fail
+/data/local/tmp/piglit-gles3/device-script.sh[68]: /vendor/bin/minmax_gles3: not found
+minmax_gles3: fail
+/data/local/tmp/piglit-gles3/device-script.sh[69]: /vendor/bin/texture-immutable-levels_gles3: not found
+texture-immutable-levels_gles3: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_rgb8: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_srgb8: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_rgba8: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_srgb8-alpha8: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_r11: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_rg11: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_rgb8-punchthrough-alpha1: fail
+/data/local/tmp/piglit-gles3/device-script.sh[70]: /vendor/bin/oes_compressed_etc2_texture-miptree_gles3: not found
+oes_compressed_etc2_texture-miptree_gles3_srgb8-punchthrough-alpha1: fail

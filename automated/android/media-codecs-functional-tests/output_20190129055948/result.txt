@@ -1,0 +1,12 @@
+audio_codec_aac fail
+audio_codec_flac fail
+audio_codec_mp3 fail
+audio_codec_tremolo fail
+speech_codec_amrnb_dec fail
+speech_codec_amrnb_enc fail
+speech_codec_amrwb_dec fail
+speech_codec_amrwb_enc fail
+video_codec_h264_dec fail
+video_codec_h264_enc fail
+video_codec_h263_dec fail
+video_codec_h263_enc fail

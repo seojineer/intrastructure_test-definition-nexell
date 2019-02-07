@@ -1,0 +1,61 @@
+Running all tests
+
+Running AAC encoder test
+ERROR: AAC encoder test file /data/linaro-android-userspace-test/audio-codec/Retribution.wav does not exist
+AAC encoder test: FAILED
+[audio_codec_aac]: test failed
+
+Running FLAC encoder/decoder test
+ERROR: FLAC encoder/decoder test returned error
+FLAC encoder/decoder test: FAILED
+[audio_codec_flac]: test failed
+
+Running MP3 decoder test
+ERROR: MP3 test file /data/linaro-android-userspace-test/audio-codec/Retribution.mp3 does not exist
+MP3 decoder test: FAILED
+[audio_codec_mp3]: test failed
+
+Running Tremolo decoder test
+ERROR: Tremolo test file /data/linaro-android-userspace-test/audio-codec/Retribution.ogg does not exist
+Tremolo decoder test: FAILED
+[audio_codec_tremolo]: test failed
+
+speech_codec_amrnb_dec: Running AMR NB decoder test
+speech_codec_amrnb_dec: ERROR: MD5SUM file '/data/linaro-android-userspace-test/speech-codec/amrnb/MD5SUM.dec' does not exist
+speech_codec_amrnb_dec: AMR NB decoder test: FAILED
+[speech_codec_amrnb_dec]: test failed
+
+speech_codec_amrnb_enc: Running AMR NB encoder test
+speech_codec_amrnb_enc: ERROR: MD5SUM file '/data/linaro-android-userspace-test/speech-codec/amrnb/MD5SUM.enc' does not exist
+speech_codec_amrnb_enc: AMR NB encoder test: FAILED
+[speech_codec_amrnb_enc]: test failed
+
+speech_codec_amrwb_dec: Running AMR WB decoder test
+speech_codec_amrwb_dec: ERROR: MD5SUM file '/data/linaro-android-userspace-test/speech-codec/amrwb/MD5SUM.dec' does not exist
+speech_codec_amrwb_dec: AMR WB decoder test: FAILED
+[speech_codec_amrwb_dec]: test failed
+
+speech_codec_amrwb_enc: Running AMR WB encoder test
+speech_codec_amrwb_enc: ERROR: MD5SUM file '/data/linaro-android-userspace-test/speech-codec/amrwb/MD5SUM.enc' does not exist
+speech_codec_amrwb_enc: AMR WB encoder test: FAILED
+[speech_codec_amrwb_enc]: test failed
+
+video_codec_h264_dec: Running H.264 decoder test
+video_codec_h264_dec: ERROR: MD5SUM file '/data/linaro-android-userspace-test/video-codec/h264/MD5SUM.dec' does not exist
+video_codec_h264_dec: H.264 decoder test: FAILED
+[video_codec_h264_dec]: test failed
+
+video_codec_h264_enc: Running H.264 encoder test
+video_codec_h264_enc: ERROR: MD5SUM file '/data/linaro-android-userspace-test/video-codec/h264/MD5SUM.enc' does not exist
+video_codec_h264_enc: H.264 encoder test: FAILED
+[video_codec_h264_enc]: test failed
+
+video_codec_h263_dec: Running H.263 decoder test
+video_codec_h263_dec: ERROR: MD5SUM file '/data/linaro-android-userspace-test/video-codec/h263/MD5SUM.dec' does not exist
+video_codec_h263_dec: H.263 decoder test: FAILED
+[video_codec_h263_dec]: test failed
+
+video_codec_h263_enc: Running H.263 encoder test
+video_codec_h263_enc: ERROR: MD5SUM file '/data/linaro-android-userspace-test/video-codec/h263/MD5SUM.enc' does not exist
+video_codec_h263_enc: H.263 encoder test: FAILED
+[video_codec_h263_enc]: test failed

@@ -1,0 +1,11 @@
+drawarrays-vertexid_gles3 fail
+minmax_gles3 fail
+texture-immutable-levels_gles3 fail
+oes_compressed_etc2_texture-miptree_gles3_rgb8 fail
+oes_compressed_etc2_texture-miptree_gles3_srgb8 fail
+oes_compressed_etc2_texture-miptree_gles3_rgba8 fail
+oes_compressed_etc2_texture-miptree_gles3_srgb8-alpha8 fail
+oes_compressed_etc2_texture-miptree_gles3_r11 fail
+oes_compressed_etc2_texture-miptree_gles3_rg11 fail
+oes_compressed_etc2_texture-miptree_gles3_rgb8-punchthrough-alpha1 fail
+oes_compressed_etc2_texture-miptree_gles3_srgb8-punchthrough-alpha1 fail
