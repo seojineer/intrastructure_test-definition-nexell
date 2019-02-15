@@ -22,6 +22,7 @@ run:
         - /usr/bin/kselftest/run_kselftest.sh
         #- lava-test-case nexell-kselftest --shell /usr/bin/kselftest/run_kselftest.sh
 
+
 parse:
     pattern: "^selftests:\\s(?P<test_case_id>\\S+)\\s[[](?P<result>(FAIL|PASS|SKIP))[]]"
     fixupdict:
