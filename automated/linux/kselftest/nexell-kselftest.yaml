@@ -6,6 +6,7 @@ metadata:
         - seoji@nexell.co.kr
     os:
         - oe
+        - ubuntu
     scope:
         - functional
     devices:
