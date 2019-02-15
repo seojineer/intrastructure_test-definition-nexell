@@ -19,7 +19,7 @@ metadata:
 run:
     # run kselftest script directly
     steps:
-        - /usr/bin/kselftest.sh/run_kselftest.sh
+        - /usr/bin/kselftest/run_kselftest.sh
         #- lava-test-case nexell-kselftest --shell /usr/bin/kselftest/run_kselftest.sh
 
 parse:
