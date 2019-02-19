@@ -12,15 +12,26 @@ metadata:
     devices:
         - all
 
-#params:
+params:
     #TESTPROG: kselftest_armhf.tar.gz
     #ENVIRONMENT: ""
+    ARTIFACTORIAL_URL: "https://archive.validation.linaro.org/artifacts/team/qa/"
+    ARTIFACTORIAL_TOKEN: "7ad10f6780acfd3debe6e17d59e0d4ec"
+    OUTPUT: ""
 
 run:
     # run kselftest script directly
     steps:
         - /usr/bin/kselftests/run_kselftest.sh
-        #- lava-test-case nexell-kselftest --shell /usr/bin/kselftest/run_kselftest.sh
+        - cd ./automated/linux/kselftest
+        - echo ${OUTPUT}
+        - if [ -z "${OUTPUT}" ]; then OUTPUT="./output"; fi
+        - echo ${OUTPUT}
+        # Upload test output to artifactorial.
+        - tar caf "nexell-kselftest-output.tar.xz" "${OUTPUT}"
+        - ../../utils/upload-to-artifactorial.sh -a "nexell-kselftest-output.tar.xz" -u "${ARTIFACTORIAL_URL}" -t "${ARTIFACTORIAL_TOKEN}"
+        # Send test result to LAVA.
+        - ../../utils/send-to-lava.sh "${OUTPUT}/result.txt"
 
 parse:
     pattern: "^selftests:\\s(?P<test_case_id>\\S+)\\s[[](?P<result>(FAIL|PASS|SKIP))[]]"

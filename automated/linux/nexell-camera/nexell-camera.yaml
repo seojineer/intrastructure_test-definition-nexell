@@ -20,6 +20,7 @@ params:
 run:
     # run kselftest script directly
     steps:
+        - chmod 777 ./run.sh
         - cd ./automated/linux/nexell-camera
         - chmod 777 ./camera_test.sh
         - ./camera_test.sh
