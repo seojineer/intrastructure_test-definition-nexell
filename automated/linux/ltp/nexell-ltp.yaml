@@ -20,12 +20,10 @@ params:
 run:
     # run kselftest script directly
     steps:
-        - cd ./automated/linux/ltp/client/autotest-local --verbose run profiler_test
-        - cd ./automated/linux/ltp/client/autotest-local --verbose run disktest
-        - cd ./automated/linux/ltp/client/autotest-local --verbose run stress
-        - cd ./automated/linux/ltp/client/autotest-local --verbose run sleeptest
-
-        - /home/nexell/autotest
+        - /home/nexell/autotest/automated/linux/ltp/client/autotest-local --verbose run profiler_test
+        - /home/nexell/autotest/automated/linux/ltp/client/autotest-local --verbose run disktest
+        - /home/nexell/autotest/automated/linux/ltp/client/autotest-local --verbose run stress
+        - /home/nexell/autotest/automated/linux/ltp/client/autotest-local --verbose run sleeptest
         #- echo ${OUTPUT}
         #- if [ -z "${OUTPUT}" ]; then OUTPUT="./output"; fi
         #- echo ${OUTPUT}
@@ -36,8 +34,8 @@ run:
         #- ../../utils/send-to-lava.sh "${OUTPUT}/result.txt"
 
 parse:
-    pattern: "^(?!.+ED)(?P<test_case_id>\\w+)\\s+(?P<result>PASS|FAIL|CONF)\\s+\\d+"
+    pattern: "^(?!.+ED)(?P<test_case_id>\\w+)\\s+(?P<result>PASS|FAIL|SKIP)\\s+\\d+"
     fixupdict:
         FAIL: fail
         PASS: pass
-        CONF: skip
+        SKIP: skip
