@@ -2,6 +2,7 @@
 OUTPUT="$(pwd)/output"
 RESULT_FILE="${OUTPUT}/result.txt"
 
+mkdir -p "${OUTPUT}"
 
 echo "Camera Test[0] Start"
 dp_cam_test -m 0 -w 720 -h 480 -p 0 -f 0 -F 1 -t 0  -d 1 -c 100
