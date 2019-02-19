@@ -1,0 +1,43 @@
+metadata:
+    name: ltp
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "Run LTP test suite"
+    maintainer:
+        - seoji@nexell.co.kr
+    os:
+        - oe
+        - ubuntu
+    scope:
+        - functional
+    devices:
+        - all
+
+params:
+    ARTIFACTORIAL_URL: "https://archive.validation.linaro.org/artifacts/team/qa/"
+    ARTIFACTORIAL_TOKEN: "7ad10f6780acfd3debe6e17d59e0d4ec"
+    OUTPUT: ""
+
+run:
+    # run kselftest script directly
+    steps:
+        - cd ./automated/linux/ltp/client/autotest-local --verbose run profiler_test
+        - cd ./automated/linux/ltp/client/autotest-local --verbose run disktest
+        - cd ./automated/linux/ltp/client/autotest-local --verbose run stress
+        - cd ./automated/linux/ltp/client/autotest-local --verbose run sleeptest
+
+        - /home/nexell/autotest
+        #- echo ${OUTPUT}
+        #- if [ -z "${OUTPUT}" ]; then OUTPUT="./output"; fi
+        #- echo ${OUTPUT}
+        # Upload test output to artifactorial.
+        #- tar caf "nexell-kselftest-output.tar.xz" "${OUTPUT}"
+        #- ../../utils/upload-to-artifactorial.sh -a "nexell-kselftest-output.tar.xz" -u "${ARTIFACTORIAL_URL}" -t "${ARTIFACTORIAL_TOKEN}"
+        # Send test result to LAVA.
+        #- ../../utils/send-to-lava.sh "${OUTPUT}/result.txt"
+
+parse:
+    pattern: "^(?!.+ED)(?P<test_case_id>\\w+)\\s+(?P<result>PASS|FAIL|CONF)\\s+\\d+"
+    fixupdict:
+        FAIL: fail
+        PASS: pass
+        CONF: skip
