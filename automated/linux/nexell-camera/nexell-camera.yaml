@@ -21,6 +21,7 @@ run:
     # run kselftest script directly
     steps:
         - cd ./automated/linux/nexell-camera
+        - ./camera_test.sh
         - echo ${OUTPUT}
         - if [ -z "${OUTPUT}" ]; then OUTPUT="./output"; fi
         - echo ${OUTPUT}
