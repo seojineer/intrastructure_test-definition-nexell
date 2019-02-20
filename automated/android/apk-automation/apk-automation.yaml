@@ -29,7 +29,9 @@ run:
     steps:
         - echo "test1:" "pass"
         # display stay awake
-        - adb shell settings put global stay_on_while_plugged_in 3
+        #- adb shell settings put global stay_on_while_plugged_in 3
+        # swipe screen
+        #- adb shell input swipe 817 500 817 300
         - cd ./automated/android/apk-automation
         - ./apk-automation.sh -S "${SKIP_INSTALL}" -t "${BOOT_TIMEOUT}" -s "${ANDROID_SERIAL}" -n "${TEST_NAME}" -l "${LOOPS}" -d "${APK_DIR}" -u "${BASE_URL}"
         # Upload test output to artifactorial.
