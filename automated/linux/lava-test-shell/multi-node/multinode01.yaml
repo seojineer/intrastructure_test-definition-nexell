@@ -1,0 +1,34 @@
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: multinode-basic-level
+    description: "Basic (level 1) MultiNode test commands for Linux Images"
+    maintainer:
+        - neil.williams@linaro.org
+    os:
+        - ubuntu
+    scope:
+        - functional
+    devices:
+        - kvm
+        - arndale
+        - panda
+        - beaglebone-black
+        - beagle-xm
+
+# Dropped 'get_ip' and 'check_ip' as these are not able to keep up with
+# changes in the output of the relevant commands. Custom scripts are
+# needed which understand the tools within the target image.
+
+# calls to sync, wait and send are no longer hidden behind a
+# lava-test-case, results are reported directly.
+
+run:
+    steps:
+        - lava-test-case multinode-role-output --shell lava-role
+        - lava-send sending source=$(lava-self) role=$(lava-role) hostname=$(hostname -f) kernver=$(uname -r) kernhost=$(uname -n)
+        - lava-wait-all sending
+        - lava-sync running
+        - lava-test-case multinode-group --shell lava-group
+        - lava-test-case linux-linaro-ubuntu-netstat --shell netstat -an
+        - lava-test-case linux-linaro-ubuntu-ifconfig-dump --shell ifconfig -a
+        - lava-test-case linux-linaro-ubuntu-route-dump-a --shell route
