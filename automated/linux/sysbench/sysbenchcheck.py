@@ -41,6 +41,9 @@ def checkPassFail(boardType, totaltime) :
         print("sysbench time is strange, too slow")
         print("FAIL")
         print("****************************")
+
+        print("nexell-sysbench fail")
+
         f = open("result.txt", 'w')
         f.write("nexell-sysbench fail\n")
         f.close()
@@ -49,6 +52,8 @@ def checkPassFail(boardType, totaltime) :
         print("****************************")
         print("sysbench time is good, PASS")
         print("****************************")
+
+        print("nexell-sysbench pass %d s" % totaltime)
         f = open("result.txt", 'w')
         f.write("nexell-sysbench pass %d s\n" % totaltime)
         f.close()
