@@ -1,0 +1,38 @@
+metadata:
+    name: nexell-sysbench
+    format: "Lava-Test-Shell Test Definition 1.0"
+    description: "SysBench is a modular, cross-platform and multi-threaded
+                  benchmark tool for evaluating OS parameters that are
+                  important for a system running a database under intensive
+                  load. Current features allow to test fileio, cpu, memory,
+                  threads, mutex and oltp."
+    maintainer:
+        - chase.qi@linaro.org
+    os:
+        - debian
+        - ubuntu
+        - fedora
+        - centos
+        - openembedded
+    scope:
+        - performance
+    environment:
+        - lava-test-shell
+    devices:
+        - hi6220-hikey
+        - apq8016-sbc
+        - mustang
+        - moonshot
+        - thunderX
+        - d03
+        - d05
+
+params:
+    DEVICE_NAME: "s5p4418-navi-reef"
+
+run:
+    steps:
+        - /usr/bin/sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run | tee /tmp/sysbench_log.txt
+        - cd ./automated/linux/sysbench/
+        - python sysbenchcheck.py "${DEVICE_NAME}"
+        - ../../utils/send-to-lava.sh "./result.txt"
