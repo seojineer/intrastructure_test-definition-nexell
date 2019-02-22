@@ -7,6 +7,7 @@ TOTAL_TIME_STR = "total time:"
 BOARD_REFS_ALLOW_MAX_TIME = {"s5p4418-navi-ref" : 50,
                              "s5p6818-avn-ref" : 110}
 SYSTEM_QUIT_CMD = "reboot"
+SEND_LAVA_CMD = "../../utils/send-to-lava.sh ./result.txt"
 
 
 def usage() :
@@ -57,6 +58,8 @@ def checkPassFail(boardType, totaltime) :
 def systemQuit() :
     os.system(SYSTEM_QUIT_CMD)
 
+def send_to_lava() :
+    os.system(SEND_LAVA_CMD)
 
 def main(boardType):
     print(boardType)
@@ -67,10 +70,12 @@ def main(boardType):
     totaltime = sysbenchGetTotalTime()
     ret = checkPassFail(boardType, totaltime)
     if ret :
-        pass
+        send_to_lava()
+        #pass
     else :
         # LAVA TEST ABORT
         systemQuit()
+        send_to_lava()
 
 
 if __name__ == "__main__":
