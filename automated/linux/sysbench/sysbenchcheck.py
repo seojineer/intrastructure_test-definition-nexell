@@ -4,7 +4,7 @@ import os
 
 sysbenchLog = "/tmp/sysbench_log.txt"
 TOTAL_TIME_STR = "total time:"
-BOARD_REFS_ALLOW_MAX_TIME = {"s5p4418-navi-ref" : 120,
+BOARD_REFS_ALLOW_MAX_TIME = {"s5p4418-navi-ref" : 50,
                              "s5p6818-avn-ref" : 110}
 SYSTEM_QUIT_CMD = "reboot"
 
@@ -49,7 +49,7 @@ def checkPassFail(boardType, totaltime) :
         print("sysbench time is good, PASS")
         print("****************************")
         f = open("result.txt", 'w')
-        f.write("nexell-sysbench success %d s\n" % totaltime)
+        f.write("nexell-sysbench pass %d s\n" % totaltime)
         f.close()
         return True
 
