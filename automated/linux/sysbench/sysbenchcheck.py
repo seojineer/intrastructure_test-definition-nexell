@@ -42,10 +42,10 @@ def checkPassFail(boardType, totaltime) :
         print("FAIL")
         print("****************************")
 
-        print("nexell-sysbench fail")
+        print("nexell-sysbench fail %d s" % totaltime)
 
         f = open("result.txt", 'w')
-        f.write("nexell-sysbench fail\n")
+        f.write("nexell-sysbench fail %d s\n" % totaltime)
         f.close()
         return False
     else :
