@@ -17,9 +17,12 @@ metadata:
         - vexpress-tc2
         - juno
 
+params:
+    DEVICE_TEST: ""
+
 run:
     steps:
-        - lava-test-case linux-linaro-ubuntu-pwd --shell pwd
+        - lava-test-raise linux-linaro-ubuntu-pwd --shell pwd
         - lava-test-case linux-linaro-ubuntu-uname --shell uname -a
         - lava-test-case linux-linaro-ubuntu-vmstat --shell vmstat
         - lava-test-case linux-linaro-ubuntu-ifconfig --shell ifconfig -a
