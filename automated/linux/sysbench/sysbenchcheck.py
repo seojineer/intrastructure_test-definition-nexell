@@ -79,8 +79,8 @@ def main(boardType):
         #pass
     else :
         # LAVA TEST ABORT
-        systemQuit()
         send_to_lava()
+        systemQuit()
 
 
 if __name__ == "__main__":
