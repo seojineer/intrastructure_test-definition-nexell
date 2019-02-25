@@ -42,7 +42,7 @@ params:
 
 run:
     steps:
-        - cd ./automated/android/noninteractive-tradefed
+        - cd ./automated/android/nexell-cts
         # Run setup.sh in the original shell to reserve env variables.
         - . ./setup.sh
         - echo "after ./setup.sh"
