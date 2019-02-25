@@ -22,7 +22,7 @@ PKG_DEPS="usbutils curl wget zip xz-utils python-lxml python-setuptools python-p
 
 dist_name
 case "${dist}" in
-    ubuntu)
+    ubuntu | debian)
         dpkg --add-architecture i386
         apt-get update -q
         install_deps "${PKG_DEPS} ${JDK}"
