@@ -3,7 +3,8 @@ metadata:
     format: "Lava-Test-Shell Test Definition 1.0"
     description: "Run tradefed based tests in LAVA."
     maintainer:
-        - seoji@nexell.co.kr
+        - milosz.wasilewski@linaro.org
+        - chase.qi@linaro.org
     os:
         - debian
         - ubuntu
@@ -19,7 +20,7 @@ params:
     # Download CTS package or copy it from local disk.
     # CTS_URL: "/root/android-cts/linaro/7.1_r1/android-cts-7.1_r1.zip"
     TEST_URL: "http://testdata.validation.linaro.org/cts/android-cts-7.1_r1.zip"
-    TEST_PARAMS: "run cts -m CtsBionicTestCases --abi arm64-v8a --disable-reboot --skip-preconditions --skip-device-info"
+    TEST_PARAMS: "run cts -m CtsBionicTestCases --abi armeabi-v7a --disable-reboot --skip-preconditions --skip-device-info"
     # set to the name of the top directory in TEST_URL archive
     # This should be 'android-cts' for CTS and android-vts for VTS
     TEST_PATH: "android-cts"
@@ -33,7 +34,6 @@ params:
     # Specify the failures number to be printed
     FAILURES_PRINTED: "0"
     TEST_REBOOT_EXPECTED: "false"
-    JAVA_OPTIONS: "-Xmx350M"
     # setup.sh determines JDK version by Android version.
     # Here are some examples for the param, see setup.sh for more details.
     # ANDROID_VERSION: android-8.1.0_r33
@@ -42,7 +42,7 @@ params:
 
 run:
     steps:
-        - cd ./automated/android/nexell-cts
+        - cd ./automated/android/noninteractive-tradefed
         # Run setup.sh in the original shell to reserve env variables.
         - . ./setup.sh
         - echo "after ./setup.sh"
@@ -51,8 +51,8 @@ run:
         # create test use to run the cts/vts tests
         - useradd -m testuser && echo "testuser created successfully"
         - chown testuser:testuser .
-        - if [[ ${TEST_REBOOT_EXPECTED} == "true" ]]; then ./monitor_fastboot.sh & fi
-        - sudo -u testuser ./tradefed.sh  -o "${TIMEOUT}" -c "${TEST_URL}" -t "${TEST_PARAMS}" -p "${TEST_PATH}" -r "${RESULTS_FORMAT}" -n "${ANDROID_SERIAL}" -f "${FAILURES_PRINTED}" -a "${AP_SSID}" -k "${AP_KEY}" -j "${JAVA_OPTIONS}"
+        - if [ "X${TEST_REBOOT_EXPECTED}" = "Xtrue" ]; then ./monitor_fastboot.sh & fi
+        - sudo -u testuser ./tradefed.sh  -o "${TIMEOUT}" -c "${TEST_URL}" -t "${TEST_PARAMS}" -p "${TEST_PATH}" -r "${RESULTS_FORMAT}" -n "${ANDROID_SERIAL}" -f "${FAILURES_PRINTED}" -a "${AP_SSID}" -k "${AP_KEY}"
         # Upload test log and result files to artifactorial.
         - cp -r ./${TEST_PATH}/results ./output/ || true
         - cp -r ./${TEST_PATH}/logs ./output/ || true
@@ -66,4 +66,4 @@ run:
         - userdel testuser -f -r || true
         # When adb device lost, end test job to mark it as 'incomplete'.
         - if ! adb shell echo ok; then error_fatal "adb device $ANDROID_SERIAL lost!"; fi
-        - if [[ ${TEST_REBOOT_EXPECTED} == "true" ]]; then killall monitor_fastboot.sh; fi
+        - if [ "X${TEST_REBOOT_EXPECTED}" = "Xtrue" ]; then killall monitor_fastboot.sh; fi

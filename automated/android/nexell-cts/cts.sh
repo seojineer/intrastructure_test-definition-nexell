@@ -1,0 +1,1 @@
+./tradefed.sh -o 1200 -c http://testdata.validation.linaro.org/cts/android-cts-7.1_r1.zip -t run cts -m CtsBionicTestCases --abi armeabi-v7a --disable-reboot --skip-preconditions --skip-device-info  -p android-cts -r aggregated -f 0
