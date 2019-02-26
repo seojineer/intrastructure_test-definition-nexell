@@ -13,8 +13,8 @@ metadata:
         - all
 
 params:
-    ARTIFACTORIAL_URL: "https://archive.validation.linaro.org/artifacts/team/qa/"
-    ARTIFACTORIAL_TOKEN: "7ad10f6780acfd3debe6e17d59e0d4ec"
+    ARTIFACTORIAL_URL: "http://192.168.1.20:9090/artifacts/team/nx-solution-team2/"
+    ARTIFACTORIAL_TOKEN: "e2e701c507849e1dfb243286d4e5dc5e"
     OUTPUT: ""
 
 run:
