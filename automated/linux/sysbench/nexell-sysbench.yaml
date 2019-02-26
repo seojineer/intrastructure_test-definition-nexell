@@ -27,9 +27,6 @@ metadata:
         - d03
         - d05
 
-params:
-    DEVICE_NAME: "s5p4418-navi-reef"
-
 run:
     steps:
       #- /usr/bin/sysbench --test=cpu --cpu-max-prime=10000 --num-threads=2 run | tee /tmp/sysbench_log.txt
