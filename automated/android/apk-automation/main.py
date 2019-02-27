@@ -12,6 +12,8 @@ parser.add_argument('-l', '--loops', type=int, dest='loops', default=1,
                     help='Set the number of test loops.')
 parser.add_argument('-v', '--verbose', action='store_true', dest='verbose',
                     default=False, help='Set the number of test loops.')
+parser.add_argument('-s', '--serial_numb', dest='serial_numb', default='',
+                    help="Specify adb serial number.")
 args = parser.parse_args()
 print('Test job arguments: %s' % args)
 

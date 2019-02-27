@@ -54,7 +54,7 @@ initialize_adb() {
     export ANDROID_SERIAL
     info_msg "Default adb device: ${ANDROID_SERIAL}"
 
-    if adb shell echo "Testing adb connectivity"; then
+    if adb -s ${ANDROID_SERIAL} shell echo "Testing adb connectivity"; then
         info_msg "Connected to device ${ANDROID_SERIAL} successfully"
     else
         error_msg "Unable to connect to device ${ANDROID_SERIAL}"

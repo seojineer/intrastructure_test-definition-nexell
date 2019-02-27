@@ -233,47 +233,47 @@ class ApkTestRunner(object):
     def install_apk(self, apk_name):
         apk_path = os.path.join(os.path.abspath(self.config['apk_dir']), apk_name)
         self.logger.info('Installing %s' % os.path.basename(apk_path))
-        self.call_adb("install %s" % apk_path)
+        self.call_adb("-s %s install %s" % (self.serialno, apk_path))
 
     def uninstall_apk(self, package):
-        install_packages = subprocess.check_output(['adb', 'shell', 'pm', 'list', 'packages'])
+        install_packages = subprocess.check_output(['adb', '-s', self.serialno, 'shell', 'pm', 'list', 'packages'])
         if package in install_packages:
             self.logger.info('Stopping %s' % package)
-            self.call_adb("shell am force-stop %s" % package)
+            self.call_adb("-s %s shell am force-stop %s" % (self.serialno, package))
 
             self.logger.info('Uninstalling %s' % package)
-            self.call_adb("shell pm uninstall %s" % package)
+            self.call_adb("-s %s shell pm uninstall %s" % (self.serialno, package))
 
     def take_screencap(self):
         screencap_file = '/data/local/tmp/%s-itr%s.png' % (self.config['name'], self.config['itr'])
-        self.call_adb('shell screencap %s' % screencap_file)
+        self.call_adb('-s %s shell screencap %s' % (self.serialno, screencap_file))
         self.logger.info('Pulling %s to output directory...' % screencap_file)
-        self.call_adb('pull %s %s' % (screencap_file, self.config['output']))
+        self.call_adb('-s %s pull %s %s' % (self.serialno, screencap_file, self.config['output']))
 
     def collect_log(self):
         self.logger.info("Saving logcat.log, logcat-events.log and dmesg.log to output directory...")
-        self.call_adb('logcat -d -v time > %s/logcat.log' % self.config['output'])
-        self.call_adb('logcat -d -b events -v time > %s/logcat-events.log' % self.config['output'])
-        self.call_adb('shell dmesg > %s/dmesg.log' % self.config['output'])
+        self.call_adb('-s %s logcat -d -v time > %s/logcat.log' % (self.serialno, self.config['output']))
+        self.call_adb('-s %s logcat -d -b events -v time > %s/logcat-events.log' % (self.serialno, self.config['output']))
+        self.call_adb('-s %s shell dmesg > %s/dmesg.log' % (self.serialno, self.config['output']))
 
     def set_performance_governor(self, target_governor="performance"):
         f_scaling_governor = ('/sys/devices/system/cpu/'
                               'cpu0/cpufreq/scaling_governor')
         f_governor_backup = '/data/local/tmp/scaling_governor'
         dir_sys_cpu = '/sys/devices/system/cpu/'
-        self.call_adb('shell "cat %s>%s"' % (f_scaling_governor,
+        self.call_adb('-s %s shell "cat %s>%s"' % (self.serialno, f_scaling_governor,
                                              f_governor_backup))
 
         f_cpus_remote = '/data/local/tmp/cpus.txt'
-        self.call_adb('shell "ls -d %s/cpu[0-9]* >%s"' % (dir_sys_cpu,
+        self.call_adb('-s %s shell "ls -d %s/cpu[0-9]* >%s"' % (self.serialno, dir_sys_cpu,
                                                           f_cpus_remote))
         f_cpus_local = os.path.join(os.path.abspath(self.config['output']),
                                     'cpus.txt')
-        self.call_adb('pull %s %s' % (f_cpus_remote, f_cpus_local))
+        self.call_adb('-s %s pull %s %s' % (self.serialno, f_cpus_remote, f_cpus_local))
         with open(f_cpus_local, 'r') as f:
             for cpu in f.readlines():
-                self.call_adb('shell "echo %s>%s/cpufreq/'
-                              'scaling_governor"' % (target_governor,
+                self.call_adb('-s %s shell "echo %s>%s/cpufreq/'
+                              'scaling_governor"' % (self.serialno, target_governor,
                                                      cpu.strip()))
 
     def set_back_governor(self):
@@ -281,7 +281,7 @@ class ApkTestRunner(object):
         f_governor_backup = '/data/local/tmp/scaling_governor'
         f_governor_local = os.path.join(os.path.abspath(self.config['output']),
                                         'scaling_governor')
-        self.call_adb('pull %s %s' % (f_governor_backup, f_governor_local))
+        self.call_adb('-s %s pull %s %s' % (self.serialno, f_governor_backup, f_governor_local))
         with open(f_governor_local, 'r') as f:
             contents = f.readlines()
             if len(contents) > 0:
@@ -293,17 +293,17 @@ class ApkTestRunner(object):
         self.set_performance_governor()
         # Install APK.
         self.download_apk(self.config['apk_file_name'])
-        self.uninstall_apk(self.config['apk_package'])
-        self.install_apk(self.config['apk_file_name'])
+        self.uninstall_apk(self.config['apk_package'], self.serialno)
+        self.install_apk(self.config['apk_file_name'], self.serialno)
 
         # Clear logcat buffer.
-        self.call_adb("logcat -c")
-        self.call_adb("logcat -b events -c")
+        self.call_adb("-s %s logcat -c" % self.serialno)
+        self.call_adb("-s %s logcat -b events -c" % self.serialno)
         time.sleep(3)
 
         # Start intent.
         self.logger.info('Starting %s' % self.config['apk_package'])
-        self.call_adb("shell am start -W -S %s" % self.config['activity'])
+        self.call_adb("-s %s shell am start -W -S %s" % (self.serialno, self.config['activity']))
         time.sleep(5)
 
     def execute(self):
