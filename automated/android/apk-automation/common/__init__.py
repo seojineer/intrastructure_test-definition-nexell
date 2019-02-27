@@ -293,8 +293,8 @@ class ApkTestRunner(object):
         self.set_performance_governor()
         # Install APK.
         self.download_apk(self.config['apk_file_name'])
-        self.uninstall_apk(self.config['apk_package'], self.serialno)
-        self.install_apk(self.config['apk_file_name'], self.serialno)
+        self.uninstall_apk(self.config['apk_package'])
+        self.install_apk(self.config['apk_file_name'])
 
         # Clear logcat buffer.
         self.call_adb("-s %s logcat -c" % self.serialno)

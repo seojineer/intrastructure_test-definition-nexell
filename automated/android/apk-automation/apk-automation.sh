@@ -48,7 +48,7 @@ else
 fi
 
 initialize_adb
-#adb_root
+adb_root
 wait_boot_completed "${BOOT_TIMEOUT}"
 disable_suspend
 
